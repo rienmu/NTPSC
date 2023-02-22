@@ -9,4 +9,5 @@ void pin::paintEvent(QPaintEvent *e){
     QPainter p(this);
     p.setPen(Qt::SolidLine);
     p.drawRect(0,0,5,5);
+    p.drawText(0,20,"this is a test");
 }
