@@ -3,7 +3,7 @@
 DCPower::DCPower()
 {
     //QString path = QFileDialog::getOpenFileName(this, "open", "../QtNTPSC/", "txt(*.txt)");
-    QString path = "../QtNTPSC//lib/power.ntp";
+    QString path = "../NTPSC//lib/power.ntp";
       //QFile file(path);
     // QString path = "c:\\s.txt";
      ReadAndWriteFile(path);//读取文件

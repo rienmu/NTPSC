@@ -3,7 +3,7 @@
 Capacitance::Capacitance()
 {
     //QString path = QFileDialog::getOpenFileName(this, "open", "../QtNTPSC/", "txt(*.txt)");
-    QString path = "../QtNTPSC//lib/cap.ntp";
+    QString path = "../NTPSC//lib/cap.ntp";
       //QFile file(path);
     // QString path = "c:\\s.txt";
      ReadAndWriteFile(path);//读取文件
