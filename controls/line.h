@@ -1,11 +1,15 @@
-#ifndef LINE_H
+﻿#ifndef LINE_H
 #define LINE_H
-#include "./controls/guibase.h"
 
-class Line : public GuiBase
+#include "QLine"
+class Line : public QLine
 {
 public:
-    Line();
+
+    void SetType(QString type);
+    QString GetType();
+private:
+    QString type;
 };
 
 #endif // LINE_H

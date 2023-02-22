@@ -33,7 +33,14 @@ SOURCES += \
     controls/line.cpp \
     controls/pin.cpp \
     controls/res.cpp \
-    controls/elmentbase.cpp
+    controls/elmentbase.cpp \
+    controls/rect.cpp \
+    controls/dcpower.cpp \
+    controls/capacitance.cpp \
+    controls/circle.cpp \
+    controls/rcircle.cpp \
+    controls/text.cpp \
+    controls/voltmeter.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -46,7 +53,14 @@ HEADERS += \
     controls/res.h \
     stable.h \
     datastruct.h \
-    controls/elmentbase.h
+    controls/elmentbase.h \
+    controls/rect.h \
+    controls/dcpower.h \
+    controls/capacitance.h \
+    controls/circle.h \
+    controls/rcircle.h \
+    controls/text.h \
+    controls/voltmeter.h
 
 FORMS += \
         mainwindow.ui \
@@ -58,7 +72,13 @@ DISTFILES += \
     src/img/res.jpeg \
     src/img/res.png \
     lib/res.ntp \
-    lib/res.txt
+    lib/res.txt \
+    lib/power.ntp \
+    lib/cap.ntp \
+    lib/power.ntp \
+    lib/res.ntp \
+    lib/res.txt \
+    lib/vol.ntp
 
 SUBDIRS += \
     QtNTPSC.pro

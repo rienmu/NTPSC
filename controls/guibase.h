@@ -6,7 +6,12 @@
 #include "QTextStream"
 #include "QMessageBox"
 #include "../stable.h"
+#include "line.h"
+#include "rect.h"
 #include "QRegExp"
+#include "rcircle.h"
+#include "circle.h"
+#include "text.h"
 #include<datastruct.h>
 //数据结构
 
@@ -34,12 +39,19 @@ public:
     double value;
     int nType;
     bool n_isSelected;
+    int AeroH,AeroW;
+    //QVector<Line> LineList;
+
+
+    QList<Line> LineList;
+    QList<NRect> RectList;
+    QList<RCircle> CircleList;
+    QList<NText> TextList;
+
     QString ElementType;
     QString CellStr;
     QStringList CellList;
-    QStringList LineList;
-    QStringList RectList;
-    QStringList CircleList;
+
     QMessageBox megToclient;//
     QString FileFormat;
     QFile file;

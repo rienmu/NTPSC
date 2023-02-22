@@ -43,25 +43,72 @@ void GuiBase::ReadAndWriteFile(QString path){
             QByteArray qb = file.readLine();
             CellList.append(qb);
         }
-
+        qDebug()<<CellList;
         AnalysisText(CellList);
-//        megToclient.setText(CellList.at(1));
-//        megToclient.exec();
+        //        megToclient.setText(CellList.at(1));
+        //        megToclient.exec();
     }
 }
 void GuiBase::AnalysisText(QStringList CellList){
     while(!CellList.isEmpty()){
-         QString temp = CellList.front();
-         QTextStream qts(&temp);
-         while (!qts.atEnd()) {
-             QString str;
-             qts>>str;
-             if(str.contains("ELEMENTTYPE")){
-                   qts>>ElementType;
-             }
-             qDebug()<<ElementType;
-         }
-         CellList.pop_front();
+        QString temp = CellList.front();
+        QTextStream qts(&temp);
+        while (!qts.atEnd()) {
+            QString str;
+            qts>>str;
+            //qDebug()<<str;
+            if(str=="ELEMENTTYPE"){
+                qts>>ElementType;
+            }
+            if(str=="AERO"){
+                qts>>AeroH>>AeroW;
+            }
+            if(str=="LINE"){
+                int x1,y1,x2,y2;
+                QString type;
+                qts>>type>>x1>>y1>>x2>>y2;
+                Line line;
+                line.setLine(x1,y1,x2,y2);
+                line.SetType(type);
+                // qDebug()<<line.GetType();
+                LineList.append(line);
+            }
+            if(str=="RECT"){
+                NRect rect;
+                int x,y,h,w;
+                QString type;
+                qts>>type>>x>>y>>w>>h;
+                rect.setRect(x,y,w,h);
+                rect.SetLineType(type);
+                RectList.append(rect);
+            }
+            if(str == "CIRCLE"){
+                RCircle circle;
+                int x,y,w,h;
+                QString type;
+                qts>>type>>x>>y>>w>>h;
+                circle.setRect(x,y,w,h);
+                circle.SetType(type);
+                CircleList.append(circle);
+
+            }
+            if(str == "TEXT"){
+                QString text;
+                int x,y;
+                qts>>x>>y>>text;
+                NText *ntext = new NText(x,y,text);
+                TextList.append(*ntext);
+
+            }
+            if(str=="PIN"){
+                int x,y,node;
+                QString nodet;
+                qts>>x>>y>>nodet>>node;
+            }
+            // qDebug()<<"Areoh:"<<AeroH;
+            // if(!LineList.isEmpty()) qDebug()<<"Linelist:"<<LineList.at(0).GetType();
+        }
+        CellList.pop_front();
     }
 
 }

@@ -15,8 +15,27 @@
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout">
-    <item row="0" column="0" alignment="Qt::AlignBottom">
+    <item row="1" column="0" alignment="Qt::AlignBottom">
      <widget class="QMdiArea" name="mian_mdiArea"/>
+    </item>
+    <item row="0" column="0" alignment="Qt::AlignLeft|Qt::AlignTop">
+     <widget class="QPushButton" name="pushButton">
+      <property name="maximumSize">
+       <size>
+        <width>979</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="text">
+       <string>电阻</string>
+      </property>
+      <property name="shortcut">
+       <string extracomment="电阻"/>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
@@ -26,7 +45,7 @@
      <x>0</x>
      <y>0</y>
      <width>997</width>
-     <height>26</height>
+     <height>23</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">

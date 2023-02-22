@@ -1,4 +1,4 @@
-#include "subwindows.h"
+﻿#include "subwindows.h"
 #include "ui_subwindows.h"
 
 SubWindows::SubWindows(QWidget *parent) :
@@ -24,6 +24,18 @@ SubWindows::SubWindows(QWidget *parent) :
     Res *res = new Res();
     res->setParent(this);
     res->move(100,300);
+
+    DCPower *dcp = new DCPower();
+    dcp->setParent(this);
+    dcp->move(200,300);
+
+    Capacitance *cap = new Capacitance();
+    cap->setParent(this);
+    cap->move(300,300);
+
+    Voltmeter *vol = new Voltmeter();
+    vol->setParent(this);
+    vol->move(300,200);
 }
 
 SubWindows::~SubWindows()

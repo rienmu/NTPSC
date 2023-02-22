@@ -1,4 +1,4 @@
-#include "resistor.h"
+﻿#include "resistor.h"
 
 Resistor::Resistor(int nType,double value)
 {
@@ -15,7 +15,7 @@ void Resistor::Draw(){
     if(this->n_isSelected == true){
         img.load("D:\\rien\\Documents\\QtNTPSC\\src\\img\\res.png");
     }else{
-        img.load("D:\\rien\\Documents\\QtNTPSC\\src\\img\\res.bmp");
+        img.load("D:\\rien\\Documents\\QtNTPSC\\src\\img\\res.png");
     }
 
     this->resize(60,30);

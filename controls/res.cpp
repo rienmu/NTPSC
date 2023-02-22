@@ -8,7 +8,7 @@ Res::Res()
      //QFile file(path);
    // QString path = "c:\\s.txt";
     ReadAndWriteFile(path);//读取文件
-    //qDebug()<<CellStr;
+    qDebug()<<LineList;
     this->setFixedSize(60,60);
 
 
@@ -18,5 +18,8 @@ Res::Res()
 void Res::paintEvent(QPaintEvent *e){
     QString str ="hj";
     QPainter p(this);
-    QRect rec(0,0,50,50);
+    p.drawLine(LineList.at(0));
+    p.drawLine(LineList.at(1));
+    p.drawRect(RectList.at(0));
+
 }
