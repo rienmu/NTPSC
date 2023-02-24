@@ -1,2 +1,2 @@
 # NTPSC
-哈哈哈
+this is a push test
