@@ -5,9 +5,9 @@
 /*
 -------------nType--------------
 */
-int NTYPE_RES = 30001;
-int NTYPE_DCPOWER = 30002;
-int NTYPE_CAPACITANCE = 30003;
-int NTYPE_VOLTMERTER = 30004;
+const int NTYPE_RES = 30001;
+const int NTYPE_DCPOWER = 30002;
+const int NTYPE_CAPACITANCE = 30003;
+const int NTYPE_VOLTMERTER = 30004;
 
-int NTYPE_USERDEF = 30999;
+const int NTYPE_USERDEF = 30999;
