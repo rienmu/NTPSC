@@ -4,7 +4,7 @@
 Res::Res()
 {
    //QString path = QFileDialog::getOpenFileName(this, "open", "../QtNTPSC/", "txt(*.txt)");
-   QString path = "../QtNTPSC//lib/res.ntp";
+   QString path = "D:\\qt\\NTPSC/lib/res.ntp";
      //QFile file(path);
    // QString path = "c:\\s.txt";
     ReadAndWriteFile(path);//读取文件

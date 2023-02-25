@@ -9,6 +9,10 @@
 #include "./controls/dcpower.h"
 #include "./controls/capacitance.h"
 #include "./controls/voltmeter.h"
+#include "./controls/diod.h"
+#include "./controls/pnp.h"
+#include "./controls/gro.h"
+#include "./controls/amp.h"
 namespace Ui {
 class SubWindows;
 }
