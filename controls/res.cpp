@@ -4,12 +4,14 @@
 Res::Res()
 {
    //QString path = QFileDialog::getOpenFileName(this, "open", "../QtNTPSC/", "txt(*.txt)");
-   QString path = "D:\\qt\\NTPSC/lib/res.ntp";
+
+   QString path = "../NTPSC//lib/res.ntp";
+
      //QFile file(path);
    // QString path = "c:\\s.txt";
     ReadAndWriteFile(path);//读取文件
     qDebug()<<LineList;
-    this->setFixedSize(60,60);
+    this->setFixedSize(AeroH,AeroW);
 
 
 
@@ -18,8 +20,23 @@ Res::Res()
 void Res::paintEvent(QPaintEvent *e){
     QString str ="hj";
     QPainter p(this);
-    p.drawLine(LineList.at(0));
-    p.drawLine(LineList.at(1));
-    p.drawRect(RectList.at(0));
+    if(!LineList.isEmpty()){
+        p.drawLine(LineList.at(0));
+        p.drawLine(LineList.at(1));
+    }
+    if(!RectList.isEmpty()){
+        p.drawRect(RectList.at(0));
+    }
+    if(!PinList.isEmpty()){
+        Pin pin;
+        int count = PinList.count();
+        for(int i = 0;i<count;i++)
+        {
+            pin = PinList.at(i);
+            p.drawRect(pin);
+        }
+    }
+
+
 
 }

@@ -1,12 +1,52 @@
 ﻿#include "pin.h"
 #include "QPainter"
-pin::pin()
+Pin::Pin()
 {
 
 }
-void pin::paintEvent(QPaintEvent *e){
-    this->setFixedSize(15,15);
-    QPainter p(this);
-    p.setPen(Qt::SolidLine);
-    p.drawRect(0,0,5,5);
+
+Pin::Pin(int x, int y)
+{
+    this->x = x;
+    this->y = y;
 }
+Pin::Pin(int node, QString PinName)
+{
+    this->node = node;
+    this->PinName = PinName;
+}
+
+
+void Pin::SetNode(int node){
+    this->node = node;
+}
+int Pin::GetNode(){
+    return this->node;
+}
+void Pin::SetPinName(QString PinName)
+{
+    this->PinName = PinName;
+}
+QString Pin::GetPinName(){
+    return this->PinName;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -65,10 +65,14 @@ HEADERS += \
     controls/rcircle.h \
     controls/text.h \
     controls/voltmeter.h \
+
     controls/diod.h \
     controls/pnp.h \
     controls/gro.h \
     controls/amp.h
+
+    ntpsc.h
+
 
 FORMS += \
         mainwindow.ui \
