@@ -31,10 +31,11 @@ void MainWindow::AddDevice(GuiBase device)
 {
     int nType = device.getnType();
     switch (nType) {
-    case value:
-
+    case NTYPE_RES:
+        doSomething();
         break;
     default:
         break;
     }
 }
+
