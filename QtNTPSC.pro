@@ -40,7 +40,11 @@ SOURCES += \
     controls/circle.cpp \
     controls/rcircle.cpp \
     controls/text.cpp \
-    controls/voltmeter.cpp
+    controls/voltmeter.cpp \
+    controls/diod.cpp \
+    controls/pnp.cpp \
+    controls/gro.cpp \
+    controls/amp.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -61,7 +65,14 @@ HEADERS += \
     controls/rcircle.h \
     controls/text.h \
     controls/voltmeter.h \
+
+    controls/diod.h \
+    controls/pnp.h \
+    controls/gro.h \
+    controls/amp.h
+
     ntpsc.h
+
 
 FORMS += \
         mainwindow.ui \
@@ -79,7 +90,11 @@ DISTFILES += \
     lib/power.ntp \
     lib/res.ntp \
     lib/res.txt \
-    lib/vol.ntp
+    lib/vol.ntp \
+    lib/diod.ntp \
+    lib/pnp.ntp \
+    lib/gro.ntp \
+    lib/amp.ntp
 
 SUBDIRS += \
     QtNTPSC.pro

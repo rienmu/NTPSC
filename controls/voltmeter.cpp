@@ -3,7 +3,9 @@
 Voltmeter::Voltmeter()
 {
     //QString path = QFileDialog::getOpenFileName(this, "open", "../QtNTPSC/", "txt(*.txt)");
+
     QString path = "../NTPSC//lib/vol.ntp";
+
       //QFile file(path);
     // QString path = "c:\\s.txt";
      ReadAndWriteFile(path);//读取文件

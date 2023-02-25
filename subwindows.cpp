@@ -25,6 +25,18 @@ SubWindows::SubWindows(QWidget *parent) :
     res->setParent(this);
     res->move(100,300);
 
+    diod *dio = new diod();
+    dio->setParent(this);
+    dio->move(250,300);
+
+    pnp *pn = new pnp();
+    pn->setParent(this);
+    dio->move(200 ,100);
+
+    gro *gr = new gro();
+    gr->setParent(this);
+    dio->move(250 ,100);
+
     DCPower *dcp = new DCPower();
     dcp->setParent(this);
     dcp->move(200,300);
@@ -32,6 +44,10 @@ SubWindows::SubWindows(QWidget *parent) :
     Capacitance *cap = new Capacitance();
     cap->setParent(this);
     cap->move(300,300);
+
+    amp *am = new amp();
+    am->setParent(this);
+    am->move(250,300);
 
     Voltmeter *vol = new Voltmeter();
     vol->setParent(this);
