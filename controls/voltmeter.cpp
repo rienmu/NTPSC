@@ -8,7 +8,7 @@ Voltmeter::Voltmeter()
     // QString path = "c:\\s.txt";
      ReadAndWriteFile(path);//读取文件
      qDebug()<<LineList;
-     this->setFixedSize(60,60);
+    this->setFixedSize(AeroH,AeroW);
 
 }
 

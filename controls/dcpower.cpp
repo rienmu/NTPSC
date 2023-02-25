@@ -8,11 +8,11 @@ DCPower::DCPower()
     // QString path = "c:\\s.txt";
      ReadAndWriteFile(path);//读取文件
      qDebug()<<LineList;
-     this->setFixedSize(60,60);
+     this->setFixedSize(AeroH,AeroW);
 }
 
-void DCPower::paintEvent(QPaintEvent *e){
-    QString str ="hj";
+void DCPower::paintEvent(QPaintEvent *e)
+{
     QPainter p(this);
     p.drawLine(LineList.at(0));
     p.drawLine(LineList.at(1));

@@ -60,7 +60,8 @@ HEADERS += \
     controls/circle.h \
     controls/rcircle.h \
     controls/text.h \
-    controls/voltmeter.h
+    controls/voltmeter.h \
+    ntpsc.h
 
 FORMS += \
         mainwindow.ui \
