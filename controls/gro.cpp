@@ -1,11 +1,11 @@
-#include "gro.h"
+﻿#include "gro.h"
 #include "QtDebug"
 #include "QFileDialog"
 gro::gro()
 {
 
     //QString path = QFileDialog::getOpenFileName(this, "open", "../QtNTPSC/", "txt(*.txt)");
-    QString path = "D:\\qt\\NTPSC/lib/gro.ntp";
+    QString path = "..\\NTPSC/lib/gro.ntp";
       //QFile file(path);
     // QString path = "c:\\s.txt";
      ReadAndWriteFile(path);//读取文件

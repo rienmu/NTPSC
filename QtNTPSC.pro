@@ -47,7 +47,7 @@ SOURCES += \
     controls/amp.cpp
 
 HEADERS += \
-        mainwindow.h \
+    mainwindow.h \
     subwindows.h \
     controls/guibase.h \
     controls/resistor.h \
@@ -65,18 +65,16 @@ HEADERS += \
     controls/rcircle.h \
     controls/text.h \
     controls/voltmeter.h \
-
     controls/diod.h \
     controls/pnp.h \
     controls/gro.h \
-    controls/amp.h
-
+    controls/amp.h \
     ntpsc.h
 
 
 FORMS += \
         mainwindow.ui \
-    subwindows.ui
+    subwindows.ui \
 
 
 DISTFILES += \
