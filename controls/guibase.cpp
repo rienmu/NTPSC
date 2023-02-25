@@ -60,6 +60,31 @@ void GuiBase::AnalysisText(QStringList CellList){
             if(str=="ELEMENTTYPE"){
                 qts>>ElementType;
             }
+            if(str=="NTYPE")
+            {
+                int type;
+                qts>>type;
+                switch (type) {
+                case NTYPE_RES:
+                    nType = NTYPE_RES;
+                    break;
+                case NTYPE_CAPACITANCE:
+                    nType = NTYPE_CAPACITANCE;
+                    break;
+                case NTYPE_DCPOWER:
+                    nType = NTYPE_DCPOWER;
+                    break;
+                case NTYPE_VOLTMERTER:
+                    nType = NTYPE_VOLTMERTER;
+                    break;
+
+                case NTYPE_USERDEF:
+                    nType = NTYPE_USERDEF;
+                    break;
+                default:
+                    break;
+                }
+            }
             if(str=="AERO"){
                 qts>>AeroH>>AeroW;
             }
@@ -101,9 +126,20 @@ void GuiBase::AnalysisText(QStringList CellList){
 
             }
             if(str=="PIN"){
+
                 int x,y,node;
                 QString nodet;
+                QString pinattr;
                 qts>>x>>y>>nodet>>node;
+                qts>>pinattr>>pinattr;
+                Pin pin;
+                pin.setRect(x,y,5,5);
+                if(pinattr == "PINNAME"){
+                    qts>>pinattr;
+                    pin.SetPinName(pinattr);
+                    pin.SetNode(node);
+                }
+                PinList.append(pin);
             }
             // qDebug()<<"Areoh:"<<AeroH;
             // if(!LineList.isEmpty()) qDebug()<<"Linelist:"<<LineList.at(0).GetType();

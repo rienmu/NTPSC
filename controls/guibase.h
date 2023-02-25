@@ -12,7 +12,9 @@
 #include "rcircle.h"
 #include "circle.h"
 #include "text.h"
+#include "pin.h"
 #include<datastruct.h>
+#include "../ntpsc.h"
 //数据结构
 
 //Line
@@ -47,6 +49,7 @@ public:
     QList<NRect> RectList;
     QList<RCircle> CircleList;
     QList<NText> TextList;
+    QList<Pin> PinList;
 
     QString ElementType;
     QString CellStr;

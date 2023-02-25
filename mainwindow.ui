@@ -6,45 +6,31 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>997</width>
-    <height>617</height>
+    <width>1077</width>
+    <height>670</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <layout class="QGridLayout" name="gridLayout">
-    <item row="1" column="0" alignment="Qt::AlignBottom">
-     <widget class="QMdiArea" name="mian_mdiArea"/>
-    </item>
-    <item row="0" column="0" alignment="Qt::AlignLeft|Qt::AlignTop">
-     <widget class="QPushButton" name="pushButton">
-      <property name="maximumSize">
-       <size>
-        <width>979</width>
-        <height>16777215</height>
-       </size>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::LeftToRight</enum>
-      </property>
-      <property name="text">
-       <string>电阻</string>
-      </property>
-      <property name="shortcut">
-       <string extracomment="电阻"/>
-      </property>
-     </widget>
-    </item>
-   </layout>
+   <widget class="QMdiArea" name="mian_mdiArea">
+    <property name="geometry">
+     <rect>
+      <x>9</x>
+      <y>-7</y>
+      <width>1059</width>
+      <height>611</height>
+     </rect>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>997</width>
+     <width>1077</width>
      <height>23</height>
     </rect>
    </property>
@@ -94,7 +80,9 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
+   <addaction name="actionNew"/>
    <addaction name="separator"/>
+   <addaction name="actionactionRes"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionnew">
@@ -175,6 +163,33 @@
   <action name="actionabout">
    <property name="text">
     <string>关于</string>
+   </property>
+  </action>
+  <action name="actionNew">
+   <property name="icon">
+    <iconset>
+     <normaloff>C:/Users/rien/Desktop/start.jpg</normaloff>C:/Users/rien/Desktop/start.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>New</string>
+   </property>
+   <property name="toolTip">
+    <string>新建文件</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionactionRes">
+   <property name="icon">
+    <iconset>
+     <normaloff>C:/Users/rien/Desktop/parse1.png</normaloff>C:/Users/rien/Desktop/parse1.png</iconset>
+   </property>
+   <property name="text">
+    <string>actionRes</string>
+   </property>
+   <property name="toolTip">
+    <string>电阻</string>
    </property>
   </action>
  </widget>
