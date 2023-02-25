@@ -1,10 +1,10 @@
-#include "amp.h"
+﻿#include "amp.h"
 #include "QtDebug"
 #include "QFileDialog"
 amp::amp()
 {
     //QString path = QFileDialog::getOpenFileName(this, "open", "../QtNTPSC/", "txt(*.txt)");
-    QString path = "D:\\qt\\NTPSC/lib/amp.ntp";
+    QString path = "..\\NTPSC/lib/amp.ntp";
       //QFile file(path);
     // QString path = "c:\\s.txt";
      ReadAndWriteFile(path);//读取文件

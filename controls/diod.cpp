@@ -1,10 +1,10 @@
-#include "diod.h"
+﻿#include "diod.h"
 #include "QtDebug"
 #include "QFileDialog"
 diod::diod()
 {
     //QString path = QFileDialog::getOpenFileName(this, "open", "../QtNTPSC/", "txt(*.txt)");
-    QString path = "D:\\qt\\NTPSC/lib/diod.ntp";
+    QString path = "..\\NTPSC/lib/diod.ntp";
       //QFile file(path);
     // QString path = "c:\\s.txt";
      ReadAndWriteFile(path);//读取文件

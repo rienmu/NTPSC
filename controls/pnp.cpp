@@ -1,10 +1,10 @@
-#include "pnp.h"
+﻿#include "pnp.h"
 #include "QtDebug"
 #include "QFileDialog"
 pnp::pnp()
 {
     //QString path = QFileDialog::getOpenFileName(this, "open", "../QtNTPSC/", "txt(*.txt)");
-    QString path = "D:\\qt\\NTPSC/lib/pnp.ntp";
+    QString path = "..\\NTPSC/lib/pnp.ntp";
       //QFile file(path);
     // QString path = "c:\\s.txt";
      ReadAndWriteFile(path);//读取文件
