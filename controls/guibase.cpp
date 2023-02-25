@@ -60,31 +60,31 @@ void GuiBase::AnalysisText(QStringList CellList){
             if(str=="ELEMENTTYPE"){
                 qts>>ElementType;
             }
-            if(str=="NTYPE")
-            {
-                int type;
-                qts>>type;
-                switch (type) {
-                case NTYPE_RES:
-                    nType = NTYPE_RES;
-                    break;
-                case NTYPE_CAPACITANCE:
-                    nType = NTYPE_CAPACITANCE;
-                    break;
-                case NTYPE_DCPOWER:
-                    nType = NTYPE_DCPOWER;
-                    break;
-                case NTYPE_VOLTMERTER:
-                    nType = NTYPE_VOLTMERTER;
-                    break;
+//            if(str=="NTYPE")
+//            {
+//                int type;
+//                qts>>type;
+//                switch (type) {
+//                case NTYPE_RES:
+//                    nType = NTYPE_RES;
+//                    break;
+//                case NTYPE_CAPACITANCE:
+//                    nType = NTYPE_CAPACITANCE;
+//                    break;
+//                case NTYPE_DCPOWER:
+//                    nType = NTYPE_DCPOWER;
+//                    break;
+//                case NTYPE_VOLTMERTER:
+//                    nType = NTYPE_VOLTMERTER;
+//                    break;
 
-                case NTYPE_USERDEF:
-                    nType = NTYPE_USERDEF;
-                    break;
-                default:
-                    break;
-                }
-            }
+//                case NTYPE_USERDEF:
+//                    nType = NTYPE_USERDEF;
+//                    break;
+//                default:
+//                    break;
+//                }
+//            }
             if(str=="AERO"){
                 qts>>AeroH>>AeroW;
             }

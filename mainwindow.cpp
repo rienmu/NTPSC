@@ -29,12 +29,12 @@ void MainWindow::AddSubWindows(){
 
 void MainWindow::AddDevice(GuiBase device)
 {
-    int nType = device.getnType();
-    switch (nType) {
-    case value:
+//    int nType = device.getnType();
+//    switch (nType) {
+//    case NTYPE_RES:
 
-        break;
-    default:
-        break;
-    }
+//        break;
+//    default:
+//        break;
+//    }
 }
