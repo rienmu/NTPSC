@@ -17,25 +17,13 @@ SubWindows::SubWindows(QWidget *parent) :
     rp->move(0,200);
     rp->move(100,200);
 
-    //Pin *pi = new pin();
-    //pi->setParent(this);
-    //pi->move(0,300);
+    pin *pi = new pin();
+    pi->setParent(this);
+    pi->move(0,300);
 
     Res *res = new Res();
     res->setParent(this);
     res->move(100,300);
-
-    diod *dio = new diod();
-    dio->setParent(this);
-    dio->move(250,300);
-
-    pnp *pn = new pnp();
-    pn->setParent(this);
-    dio->move(200 ,100);
-
-    gro *gr = new gro();
-    gr->setParent(this);
-    dio->move(250 ,100);
 
     DCPower *dcp = new DCPower();
     dcp->setParent(this);
@@ -45,13 +33,25 @@ SubWindows::SubWindows(QWidget *parent) :
     cap->setParent(this);
     cap->move(300,300);
 
-    amp *am = new amp();
-    am->setParent(this);
-    am->move(250,300);
-
     Voltmeter *vol = new Voltmeter();
     vol->setParent(this);
     vol->move(300,200);
+
+    Ammeter *amm = new Ammeter();
+    amm->setParent(this);
+    amm->move(200,200);
+
+    Diode *dio = new Diode();
+    dio->setParent(this);
+    dio->move(250,200);
+
+    Npntriode *npn = new Npntriode();
+    npn->setParent(this);
+    npn->move(250,100);
+
+    Switch *swi = new Switch();
+    swi->setParent(this);
+    swi->move(100,100);
 }
 
 SubWindows::~SubWindows()
