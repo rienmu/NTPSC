@@ -1,6 +1,5 @@
 ﻿#ifndef ELMENTBASE_H
 #define ELMENTBASE_H
-#include "QString"
 #include "QDebug"
 #include "QStringList"
 

@@ -52,7 +52,7 @@ void UserDef::paintEvent(QPaintEvent *e)
         for(int i = 0;i<TextList.count();i++)
         {
 
-            Text text = TextList.
+            //Text text = TextList.
         }
     }
 }
