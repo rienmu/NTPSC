@@ -17,9 +17,9 @@ SubWindows::SubWindows(QWidget *parent) :
     rp->move(0,200);
     rp->move(100,200);
 
-    pin *pi = new pin();
-    pi->setParent(this);
-    pi->move(0,300);
+//    pin *pi = new pin();
+//    pi->setParent(this);
+//    pi->move(0,300);
 
     Res *res = new Res();
     res->setParent(this);
