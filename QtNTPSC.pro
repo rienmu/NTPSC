@@ -44,7 +44,8 @@ SOURCES += \
     controls/diod.cpp \
     controls/pnp.cpp \
     controls/gro.cpp \
-    controls/amp.cpp
+    controls/amp.cpp \
+    controls/userdef.cpp
 
 HEADERS += \
     mainwindow.h \
@@ -69,7 +70,8 @@ HEADERS += \
     controls/pnp.h \
     controls/gro.h \
     controls/amp.h \
-    ntpsc.h
+    ntpsc.h \
+    controls/userdef.h
 
 
 FORMS += \

@@ -13,6 +13,7 @@
 #include "./controls/pnp.h"
 #include "./controls/gro.h"
 #include "./controls/amp.h"
+#include "./controls/userdef.h"
 namespace Ui {
 class SubWindows;
 }

@@ -30,12 +30,13 @@ void MainWindow::AddSubWindows(){
 void MainWindow::AddDevice(GuiBase device)
 {
     int nType = device.getnType();
-    switch (nType) {
-    case NTYPE_RES:
-        doSomething();
-        break;
-    default:
-        break;
-    }
+//    switch (nType) {
+//    case NTYPE_RES:
+//        Res *res = new Res();
+
+//        break;
+//    default:
+//        break;
+//    }
 }
 
