@@ -1,8 +1,8 @@
-#include "npntriode.h"
+﻿#include "npntriode.h"
 
 Npntriode::Npntriode()
 {
-    QString path = "D:\\qt\\NTPSC\\lib/npn.ntp";
+    QString path = "..\\NTPSC\\lib/npn.ntp";
       //QFile file(path);
     // QString path = "c:\\s.txt";
      ReadAndWriteFile(path);//读取文件

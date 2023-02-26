@@ -27,24 +27,28 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     subwindows.cpp \
-    controls/guibase.cpp \
     controls/resistor.cpp \
     controls/resister_pianter.cpp \
     controls/line.cpp \
     controls/pin.cpp \
     controls/res.cpp \
-    controls/elmentbase.cpp \
     controls/rect.cpp \
-    controls/dcpower.cpp \
-    controls/capacitance.cpp \
     controls/circle.cpp \
     controls/rcircle.cpp \
     controls/text.cpp \
     controls/voltmeter.cpp \
+    controls/amp.cpp \
+    controls/userdef.cpp \
+    controls/capacitance.cpp \
+    controls/dcpower.cpp \
     controls/diod.cpp \
-    controls/pnp.cpp \
+    controls/diode.cpp \
+    controls/elmentbase.cpp \
     controls/gro.cpp \
-    controls/amp.cpp
+    controls/guibase.cpp \
+    controls/npntriode.cpp \
+    controls/pnp.cpp \
+
 
 HEADERS += \
     mainwindow.h \
@@ -59,17 +63,24 @@ HEADERS += \
     datastruct.h \
     controls/elmentbase.h \
     controls/rect.h \
-    controls/dcpower.h \
-    controls/capacitance.h \
-    controls/circle.h \
-    controls/rcircle.h \
     controls/text.h \
     controls/voltmeter.h \
-    controls/diod.h \
     controls/pnp.h \
-    controls/gro.h \
+    ntpsc.h \
+    controls/userdef.h \
     controls/amp.h \
-    ntpsc.h
+    controls/capacitance.h \
+    controls/circle.h \
+    controls/dcpower.h \
+    controls/diod.h \
+    controls/diode.h \
+    controls/gro.h \
+    controls/npntriode.h \
+    controls/pin.h \
+    controls/rcircle.h \
+    controls/rect.h \
+    controls/userdef.h \
+    controls/voltmeter.h
 
 
 FORMS += \

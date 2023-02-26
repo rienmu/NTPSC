@@ -20,5 +20,7 @@
 #include "QFile"
 #include "QTextStream"
 //自行实现的类
+
+//#include "./controls/guibase.h"
 #endif
 #endif
