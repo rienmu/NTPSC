@@ -1,10 +1,10 @@
-
+﻿
 #include "ammeter.h"
 
 Ammeter::Ammeter()
 {
     //QString path = QFileDialog::getOpenFileName(this, "open", "../QtNTPSC/", "txt(*.txt)");
-    QString path = "D:\\qt\\NTPSC\\lib/amm.ntp";
+    QString path = "..\\NTPSC\\lib/amm.ntp";
       //QFile file(path);
     // QString path = "c:\\s.txt";
      ReadAndWriteFile(path);//读取文件
