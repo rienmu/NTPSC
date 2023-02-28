@@ -1,8 +1,8 @@
-#include "diode.h"
+﻿#include "diode.h"
 
 Diode::Diode()
 {
-    QString path = "D:\\qt\\NTPSC\\lib/dio.ntp";
+    QString path = "..\\NTPSC\\lib/dio.ntp";
     ReadAndWriteFile(path);//读取文件
     qDebug()<<LineList;
     this->setFixedSize(60,60);
