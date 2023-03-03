@@ -1,14 +1,12 @@
 ﻿#ifndef GUIBASE_H
 #define GUIBASE_H
-#include "QLabel"
+#include "QImage"
 #include "QPainter"
 #include "QFile"
 #include "QTextStream"
-#include "QMessageBox"
 #include "../stable.h"
 #include "line.h"
 #include "rect.h"
-#include "QRegExp"
 #include "rcircle.h"
 #include "circle.h"
 #include "text.h"
@@ -26,10 +24,9 @@ struct name
 
 
 
-class GuiBase:public QLabel{
+class GuiBase{
 public:
     GuiBase();
-    virtual void Draw(){}
     virtual void setnType(int nType);
     virtual int getnType();
     virtual void setValue(double value);
@@ -39,6 +36,7 @@ public:
     virtual void AnalysisText(QStringList CellList);
 //器件属性
 public:
+    void paintEvent(QPaintEvent *e);
     double value;
     int nType;
     bool n_isSelected;
@@ -56,7 +54,6 @@ public:
     QString CellStr;
     QStringList CellList;
 
-    QMessageBox megToclient;//
     QString FileFormat;
     QFile file;
 

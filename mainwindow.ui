@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1077</width>
-    <height>670</height>
+    <width>1152</width>
+    <height>668</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,11 +17,17 @@
    <widget class="QMdiArea" name="mian_mdiArea">
     <property name="geometry">
      <rect>
-      <x>9</x>
+      <x>-1</x>
       <y>-7</y>
-      <width>1059</width>
-      <height>611</height>
+      <width>1280</width>
+      <height>720</height>
      </rect>
+    </property>
+    <property name="sizeIncrement">
+     <size>
+      <width>1</width>
+      <height>1</height>
+     </size>
     </property>
    </widget>
   </widget>
@@ -30,7 +36,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1077</width>
+     <width>1152</width>
      <height>23</height>
     </rect>
    </property>
@@ -73,6 +79,7 @@
    <addaction name="menu_3"/>
    <addaction name="menu_4"/>
   </widget>
+  <widget class="QStatusBar" name="statusBar"/>
   <widget class="QToolBar" name="mainToolBar">
    <attribute name="toolBarArea">
     <enum>TopToolBarArea</enum>
@@ -80,11 +87,10 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
-   <addaction name="actionNew"/>
    <addaction name="separator"/>
-   <addaction name="actionactionRes"/>
+   <addaction name="actionNew"/>
+   <addaction name="actionRes"/>
   </widget>
-  <widget class="QStatusBar" name="statusBar"/>
   <action name="actionnew">
    <property name="text">
     <string>新建文件</string>
@@ -166,9 +172,8 @@
    </property>
   </action>
   <action name="actionNew">
-   <property name="icon">
-    <iconset>
-     <normaloff>C:/Users/rien/Desktop/start.jpg</normaloff>C:/Users/rien/Desktop/start.jpg</iconset>
+   <property name="checkable">
+    <bool>true</bool>
    </property>
    <property name="text">
     <string>New</string>
@@ -180,13 +185,13 @@
     <string>Ctrl+N</string>
    </property>
   </action>
-  <action name="actionactionRes">
+  <action name="actionRes">
    <property name="icon">
-    <iconset>
-     <normaloff>C:/Users/rien/Desktop/parse1.png</normaloff>C:/Users/rien/Desktop/parse1.png</iconset>
+    <iconset theme="R">
+     <normaloff>src/img/res.png</normaloff>src/img/res.png</iconset>
    </property>
    <property name="text">
-    <string>actionRes</string>
+    <string>电阻</string>
    </property>
    <property name="toolTip">
     <string>电阻</string>

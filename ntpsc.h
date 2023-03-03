@@ -11,3 +11,5 @@ const int NTYPE_CAPACITANCE = 30003;
 const int NTYPE_VOLTMERTER = 30004;
 
 const int NTYPE_USERDEF = 30999;
+
+int static Elementpath;

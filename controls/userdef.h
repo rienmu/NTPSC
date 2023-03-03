@@ -13,7 +13,15 @@ class UserDef :public GuiBase
 public:
     UserDef();
     UserDef(QString path);
+    UserDef(QString path,QObject parent);
     void paintEvent(QPaintEvent *e);
+
+    QString getPath() const;
+    void setPath(const QString &value);
+
+private:
+    QObject guibak;
+    QString path;
 };
 
 

@@ -1,7 +1,9 @@
 ﻿#include "guibase.h"
 
-GuiBase::GuiBase(){
 
+
+GuiBase::GuiBase()
+{
 
 }
 
@@ -34,9 +36,9 @@ void GuiBase::ReadAndWriteFile(QString path){
     bool isopened= file.open(QIODevice::ReadWrite | QIODevice::Text);
     if(!isopened)  {
         qDebug()<<file.exists();
-        megToclient.setWindowTitle("警告");
-        megToclient.setText("器件文件打开失败，请确认器件文件是否存在");
-        megToclient.exec();
+        //megToclient.setWindowTitle("警告");
+       // megToclient.setText("器件文件打开失败，请确认器件文件是否存在");
+       // megToclient.exec();
     }else{
 
         while(!file.atEnd()){
@@ -149,6 +151,49 @@ void GuiBase::AnalysisText(QStringList CellList){
 
 }
 
+
+void GuiBase::paintEvent(QPaintEvent *e)
+{
+
+//    QPainter p(this);
+//    if(!LineList.isEmpty()){
+//        for(int i =0; i<LineList.count();i++){
+//            p.drawLine(LineList.at(i));
+//        }
+
+//    }
+//    if(!RectList.isEmpty()){
+//        for(int i =0 ;i<RectList.count();i++){
+//            p.drawRect(RectList.at(i));
+//        }
+
+//    }
+//    if(!PinList.isEmpty()){
+//        Pin pin;
+//        int count = PinList.count();
+//        for(int i = 0;i<count;i++)
+//        {
+//            pin = PinList.at(i);
+//            p.drawRect(pin);
+//        }
+//    }
+//    if(!CircleList.isEmpty()){
+//        RCircle a;
+//        int count = CircleList.count();
+//        for(int i = 0;i<count;i++)
+//        {
+//            a = CircleList.at(i);
+//            p.drawEllipse(a);
+//        }
+//    }
+//    if(!TextList.isEmpty()){
+//        for(int i = 0;i<TextList.count();i++)
+//        {
+
+//            //Text text = TextList.
+//        }
+//    }
+}
 
 
 

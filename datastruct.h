@@ -13,6 +13,7 @@
 class NTPSTRUCT : public QObject{
 public:
     explicit NTPSTRUCT(QObject *parent=nullptr);
+
 public:
     /*器件文件里面的线段*/
     static struct LINESTRUCT
@@ -22,7 +23,8 @@ public:
         QPoint x1;
         QPoint x2;
     }LINESTRUCT;
-     /*器件文件里面的矩形*/
+
+    /*器件文件里面的矩形*/
     static struct RECTSTRUCT{
         QString LineType;
         QPoint x1;
