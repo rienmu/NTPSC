@@ -3,19 +3,23 @@
 #include "QPixmap"
 SubWindow::SubWindow()
 {
+    backView.resize(this->size());
+    backView.setScene(backScene);
+    backScene.setParent(backView);
+
     guiback = new GUIBackGround();
     guiback->resize(this->size());
     guiback->setParent(this);
     guiback->move(0,0);
     guiback->installEventFilter(this);
-   // UserDef *res = new UserDef("../NTPSC//lib//res.ntp");
+    // UserDef *res = new UserDef("../NTPSC//lib//res.ntp");
     //res->setParent(guiback);
-   // res->move(100,300);
+    // res->move(100,300);
 }
-void SubWindow::AddDevice(QImage image){
-   // UserDef *res1 = new UserDef("../NTPSC//lib//res.ntp");
-   // res1->setParent(guiback);
-   // res1->move(200,300);
+void SubWindow::AddDevice(UserDef* image){
+    // UserDef *res1 = new UserDef("../NTPSC//lib//res.ntp");
+    // res1->setParent(guiback);
+    // res1->move(200,300);
     PerElment pe;
     pe.image=image;
     pe.x = 500;
@@ -27,25 +31,35 @@ void SubWindow::AddDevice(QImage image){
 
 bool SubWindow::eventFilter(QObject *watched, QEvent *event)
 {
+
     if(watched == guiback)
     {
         if(event->type() == QEvent::Paint)
         {
             qDebug()<<"i am drawing";
             QPainter p(guiback);
-           // QImage *i =  guiback->getImage();
-           // p.drawEllipse(100,200,30,30);
             if(!ElementList.isEmpty())
             {
                 for(auto pe:ElementList)
                 {
-                     p.drawImage(pe.x,pe.y,pe.image);
-                 }
+                    QImage img = pe.image->mirrored();
+                    // img->mirrored();
+                    //img->copy(pe.image);
+                    //qDebug()<<img.save("d:/res1.png");
+                    p.drawImage(pe.x,pe.y,img);
+                }
+            }
+        }
+        if(event->type() == QEvent::MouseButtonPress)
+        {
+            qDebug()<<"clicked on bg";
+            for(auto pe:ElementList)
+            {
 
             }
-
-
         }
     }
+
+    return false;
 }
 

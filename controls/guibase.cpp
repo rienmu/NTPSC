@@ -39,6 +39,7 @@ void GuiBase::ReadAndWriteFile(QString path){
         //megToclient.setWindowTitle("警告");
        // megToclient.setText("器件文件打开失败，请确认器件文件是否存在");
        // megToclient.exec();
+
     }else{
 
         while(!file.atEnd()){

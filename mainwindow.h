@@ -2,6 +2,7 @@
 #define MAINWINDOW_H
 #include <QMdiArea>
 #include <QMainWindow>
+#include <QMessageBox>
 #include <QThread>
 #include "./controls/guibase.h"
 #include "controls/drawthread.h"
@@ -16,7 +17,7 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     void AddSubWindows();
-    void AddDevice(QImage image);
+    void AddDevice(UserDef* image);
     ~MainWindow();
 
 private:
@@ -25,6 +26,8 @@ private:
     void doSomething(){
 
     }
+
+    void getMessageBox(QString msg);
     void connections();
     void myinit();
     void delAllThread();

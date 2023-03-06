@@ -1,6 +1,8 @@
 ﻿#ifndef SUBWINDOW_H
 #define SUBWINDOW_H
-
+#include <QGraphicsView>
+#include <QGraphicsScene>
+#include <QGraphicsItem>
 #include <QList>
 #include <guibackground.h>
 #include <QMdiSubWindow>
@@ -8,15 +10,18 @@
 struct PerElment
 {
     int x,y;
-    QImage image;
+    UserDef* image;
 };
 class SubWindow : public QMdiSubWindow
 {
 public:
     SubWindow();
-    void AddDevice(QImage image);
+    void AddDevice(UserDef* image);
 
 private:
+    QGraphicsView backView;
+    QGraphicsScene backScene;
+
     GUIBackGround *guiback;
     QList<PerElment> ElementList;
 

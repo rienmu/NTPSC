@@ -26,7 +26,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    subwindows.cpp \
     controls/line.cpp \
     controls/pin.cpp \
     controls/rect.cpp \
@@ -43,7 +42,6 @@ SOURCES += \
 
 HEADERS += \
     mainwindow.h \
-    subwindows.h \
     controls/guibase.h \
     controls/line.h \
     controls/pin.h \

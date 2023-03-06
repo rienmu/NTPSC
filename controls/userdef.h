@@ -11,7 +11,8 @@
 class UserDef :public GuiBase
 {
 public:
-    UserDef();
+
+    using GuiBase::GuiBase;
     UserDef(QString path);
     UserDef(QString path,QObject parent);
     void paintEvent(QPaintEvent *e);

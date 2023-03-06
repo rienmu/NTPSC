@@ -24,9 +24,10 @@ struct name
 
 
 
-class GuiBase{
+class GuiBase : public QImage{
 public:
     GuiBase();
+    using QImage::QImage;
     virtual void setnType(int nType);
     virtual int getnType();
     virtual void setValue(double value);
@@ -57,6 +58,7 @@ public:
     QString FileFormat;
     QFile file;
 
+signals:
 
  //正则表达式
 

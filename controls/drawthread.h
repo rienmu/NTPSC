@@ -3,15 +3,17 @@
 
 #include "controls/userdef.h"
 #include <QObject>
-
+#include <QFile>
 class DrawThread : public QObject
 {
     Q_OBJECT
 public:
     explicit DrawThread(QObject *parent = nullptr);
+
     void drawres();
 signals:
-    void sendiamge(QImage image);
+    void sendiamge(UserDef *image);
+    void sendMessageBOX(QString msg);
 public slots:
 
 private:

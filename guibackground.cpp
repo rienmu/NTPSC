@@ -60,10 +60,6 @@ void GUIBackGround::setImage(QImage value)
 
 void GUIBackGround::paintEvent(QPaintEvent *event)
 {
-    qDebug()<<"i am drawing";
-    QPainter p(this);
-    QImage i = image;
-    p.drawEllipse(100,200,30,30);
-    p.drawImage(50,50,i);
+
 
 }

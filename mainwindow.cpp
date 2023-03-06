@@ -1,6 +1,5 @@
 ﻿#include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "subwindows.h"
 #include "subwindow.h"
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -21,12 +20,30 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+void MainWindow::getMessageBox(QString msg)
+{
+    qDebug()<<"get messagebox";
+    QMessageBox megToclient;
+    megToclient.setWindowTitle("警告");
+    megToclient.setText(msg);
+    megToclient.exec();
+}
+
 void MainWindow::connections()
 {
     connect(ui->actionNew,&QAction::triggered,this,&MainWindow::AddSubWindows);
+    //connect(ui->actionRes,&QAction::triggered,drawT,&DrawThread::drawres);
     connect(ui->actionRes,&QAction::triggered,drawT,&DrawThread::drawres);
+
+
+    //绘画线程连接
     connect(drawT,DrawThread::sendiamge,this,&MainWindow::AddDevice);
     connect(this,&MainWindow::destroyed,this,&MainWindow::delAllThread);
+    connect(drawT,DrawThread::sendMessageBOX,this,&MainWindow::getMessageBox);
+
+
+    //提示框
+
 }
 
 void MainWindow::myinit()
@@ -74,7 +91,7 @@ void MainWindow::AddSubWindows(){
     w->show();
 }
 
-void MainWindow::AddDevice(QImage image)
+void MainWindow::AddDevice(UserDef* image)
 {
     //int nType = device.getnType();
     int i = MainWindow::ui->mian_mdiArea->subWindowList().count();

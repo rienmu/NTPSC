@@ -1,6 +1,5 @@
 ﻿#ifndef NTPSC_H
 #define NTPSC_H
-
 #endif // NTPSC_H
 /*
 -------------nType--------------
@@ -12,4 +11,4 @@ const int NTYPE_VOLTMERTER = 30004;
 
 const int NTYPE_USERDEF = 30999;
 
-int static Elementpath;
+//int static Elementpath;
