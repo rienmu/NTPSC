@@ -4,7 +4,6 @@
 #include <QMainWindow>
 #include <QMessageBox>
 #include <QThread>
-#include "./controls/guibase.h"
 #include "controls/drawthread.h"
 namespace Ui {
 class MainWindow;

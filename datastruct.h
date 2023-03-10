@@ -10,6 +10,7 @@
 #include <QObject>
 #include <QPoint>
 #include <QRect>
+#include "controls/userdef.h"
 class NTPSTRUCT : public QObject{
 public:
     explicit NTPSTRUCT(QObject *parent=nullptr);
@@ -30,6 +31,7 @@ public:
         QPoint x1;
         QPoint X2;
     }RECTSTRUCT;
+
 };
 
 #endif // DATASTRUCT_H

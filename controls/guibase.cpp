@@ -63,31 +63,31 @@ void GuiBase::AnalysisText(QStringList CellList){
             if(str=="ELEMENTTYPE"){
                 qts>>ElementType;
             }
-            if(str=="NTYPE")
-            {
-                int type;
-                qts>>type;
-                switch (type) {
-                case NTYPE_RES:
-                    nType = NTYPE_RES;
-                    break;
-                case NTYPE_CAPACITANCE:
-                    nType = NTYPE_CAPACITANCE;
-                    break;
-                case NTYPE_DCPOWER:
-                    nType = NTYPE_DCPOWER;
-                    break;
-                case NTYPE_VOLTMERTER:
-                    nType = NTYPE_VOLTMERTER;
-                    break;
+//            if(str=="NTYPE")
+//            {
+//                int type;
+//                qts>>type;
+//                switch (type) {
+//                case NTYPE_RES:
+//                    nType = NTYPE_RES;
+//                    break;
+//                case NTYPE_CAPACITANCE:
+//                    nType = NTYPE_CAPACITANCE;
+//                    break;
+//                case NTYPE_DCPOWER:
+//                    nType = NTYPE_DCPOWER;
+//                    break;
+//                case NTYPE_VOLTMERTER:
+//                    nType = NTYPE_VOLTMERTER;
+//                    break;
 
-                case NTYPE_USERDEF:
-                    nType = NTYPE_USERDEF;
-                    break;
-                default:
-                    break;
-                }
-            }
+//                case NTYPE_USERDEF:
+//                    nType = NTYPE_USERDEF;
+//                    break;
+//                default:
+//                    break;
+//                }
+//            }
             if(str=="AERO"){
                 qts>>AeroH>>AeroW;
             }
@@ -155,10 +155,10 @@ void GuiBase::AnalysisText(QStringList CellList){
 
 void GuiBase::paintEvent(QPaintEvent *e)
 {
-
-//    QPainter p(this);
-//    if(!LineList.isEmpty()){
-//        for(int i =0; i<LineList.count();i++){
+    
+    //    QPainter p(this);
+    //    if(!LineList.isEmpty()){
+    //        for(int i =0; i<LineList.count();i++){
 //            p.drawLine(LineList.at(i));
 //        }
 
@@ -194,6 +194,66 @@ void GuiBase::paintEvent(QPaintEvent *e)
 //            //Text text = TextList.
 //        }
 //    }
+}
+
+bool GuiBase::getN_isSelected() const
+{
+    return n_isSelected;
+}
+
+void GuiBase::setN_isSelected(bool value)
+{
+    n_isSelected = value;
+}
+
+int GuiBase::getAeroW() const
+{
+    return AeroW;
+}
+
+void GuiBase::setAeroW(int value)
+{
+    AeroW = value;
+}
+
+QImage *GuiBase::getImage() const
+{
+    return image;
+}
+
+void GuiBase::setImage(QImage *value)
+{
+    image = value;
+}
+
+int GuiBase::getAeroH() const
+{
+    return AeroH;
+}
+
+void GuiBase::setAeroH(int value)
+{
+    AeroH = value;
+}
+
+int GuiBase::getPointY() const
+{
+    return PointY;
+}
+
+void GuiBase::setPointY(int value)
+{
+    PointY = value;
+}
+
+int GuiBase::getPointX() const
+{
+    return PointX;
+}
+
+void GuiBase::setPointX(int value)
+{
+    PointX = value;
 }
 
 

@@ -34,15 +34,15 @@ SOURCES += \
     controls/text.cpp \
     controls/userdef.cpp \
     controls/elmentbase.cpp \
-    controls/guibase.cpp \
     subwindow.cpp \
     guibackground.cpp \
-    controls/drawthread.cpp
+    controls/drawthread.cpp \
+    controls/guiitem.cpp \
+    controls/guibase.cpp
 
 
 HEADERS += \
     mainwindow.h \
-    controls/guibase.h \
     controls/line.h \
     controls/pin.h \
     stable.h \
@@ -59,7 +59,9 @@ HEADERS += \
     controls/userdef.h \
     subwindow.h \
     guibackground.h \
-    controls/drawthread.h
+    controls/drawthread.h \
+    controls/guiitem.h \
+    controls/guibase.h
 
 
 FORMS += \

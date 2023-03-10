@@ -10,6 +10,11 @@ UserDef::UserDef(QString path)
 
 }
 
+UserDef::UserDef(QString path, QObject parent)
+{
+
+}
+
 
 void UserDef::paintEvent(QPaintEvent *e)
 {
@@ -63,3 +68,4 @@ void UserDef::setPath(const QString &value)
 {
     path = value;
 }
+
