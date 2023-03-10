@@ -26,61 +26,42 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    subwindows.cpp \
-    controls/resistor.cpp \
-    controls/resister_pianter.cpp \
     controls/line.cpp \
     controls/pin.cpp \
-    controls/res.cpp \
     controls/rect.cpp \
     controls/circle.cpp \
     controls/rcircle.cpp \
     controls/text.cpp \
-    controls/voltmeter.cpp \
-    controls/amp.cpp \
     controls/userdef.cpp \
-    controls/capacitance.cpp \
-    controls/dcpower.cpp \
-    controls/diod.cpp \
-    controls/diode.cpp \
     controls/elmentbase.cpp \
-    controls/gro.cpp \
-    controls/guibase.cpp \
-    controls/npntriode.cpp \
-    controls/pnp.cpp \
+    subwindow.cpp \
+    guibackground.cpp \
+    controls/drawthread.cpp \
+    controls/guiitem.cpp \
+    controls/guibase.cpp
 
 
 HEADERS += \
     mainwindow.h \
-    subwindows.h \
-    controls/guibase.h \
-    controls/resistor.h \
-    controls/resister_pianter.h \
     controls/line.h \
     controls/pin.h \
-    controls/res.h \
     stable.h \
     datastruct.h \
     controls/elmentbase.h \
     controls/rect.h \
     controls/text.h \
-    controls/voltmeter.h \
-    controls/pnp.h \
     ntpsc.h \
     controls/userdef.h \
-    controls/amp.h \
-    controls/capacitance.h \
     controls/circle.h \
-    controls/dcpower.h \
-    controls/diod.h \
-    controls/diode.h \
-    controls/gro.h \
-    controls/npntriode.h \
     controls/pin.h \
     controls/rcircle.h \
     controls/rect.h \
     controls/userdef.h \
-    controls/voltmeter.h
+    subwindow.h \
+    guibackground.h \
+    controls/drawthread.h \
+    controls/guiitem.h \
+    controls/guibase.h
 
 
 FORMS += \
@@ -103,7 +84,10 @@ DISTFILES += \
     lib/diod.ntp \
     lib/pnp.ntp \
     lib/gro.ntp \
-    lib/amp.ntp
+    lib/amp.ntp \
+    src/img/res.png \
+    format.clang-format
 
 SUBDIRS += \
     QtNTPSC.pro
+

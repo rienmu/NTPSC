@@ -1,19 +1,17 @@
 ﻿#ifndef GUIBASE_H
 #define GUIBASE_H
-#include "QLabel"
+#include "QImage"
 #include "QPainter"
 #include "QFile"
 #include "QTextStream"
-#include "QMessageBox"
 #include "../stable.h"
 #include "line.h"
 #include "rect.h"
-#include "QRegExp"
 #include "rcircle.h"
 #include "circle.h"
 #include "text.h"
 #include "pin.h"
-#include<datastruct.h>
+#include "QWidget"
 #include "../ntpsc.h"
 
 //数据结构
@@ -26,10 +24,10 @@ struct name
 
 
 
-class GuiBase:public QLabel{
+class GuiBase : public QWidget{
 public:
     GuiBase();
-    virtual void Draw(){}
+
     virtual void setnType(int nType);
     virtual int getnType();
     virtual void setValue(double value);
@@ -38,7 +36,34 @@ public:
     virtual void ReadAndWriteFile(QString path);
     virtual void AnalysisText(QStringList CellList);
 //器件属性
+
+    int getPointX() const;
+    void setPointX(int value);
+
+    int getPointY() const;
+    void setPointY(int value);
+
+    int getAeroH() const;
+    void setAeroH(int value);
+
+    int getAeroW() const;
+    void setAeroW(int value);
 public:
+    QList<Line> LineList;
+    QList<NRect> RectList;
+    QList<RCircle> CircleList;
+    QList<NText> TextList;
+    QList<Pin> PinList;
+    QImage *getImage() const;
+    void setImage(QImage *value);
+
+    bool getN_isSelected() const;
+    void setN_isSelected(bool value);
+
+private:
+    QImage *image;
+    void paintEvent(QPaintEvent *e);
+    int PointX,PointY;
     double value;
     int nType;
     bool n_isSelected;
@@ -46,20 +71,16 @@ public:
     //QVector<Line> LineList;
 
 
-    QList<Line> LineList;
-    QList<NRect> RectList;
-    QList<RCircle> CircleList;
-    QList<NText> TextList;
-    QList<Pin> PinList;
+
 
     QString ElementType;
     QString CellStr;
     QStringList CellList;
 
-    QMessageBox megToclient;//
     QString FileFormat;
     QFile file;
 
+signals:
 
  //正则表达式
 
