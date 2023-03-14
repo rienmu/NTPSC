@@ -17,6 +17,8 @@
 #include "QPointF"
 #include "QGraphicsSceneMouseEvent"
 #include "QGraphicsPathItem"
+#include "QPen"
+#include "QColor"
 class GuiItem : public QObject, public QGraphicsItem
 {
     Q_OBJECT

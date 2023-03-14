@@ -86,8 +86,12 @@ DISTFILES += \
     lib/gro.ntp \
     lib/amp.ntp \
     src/img/res.png \
-    format.clang-format
+    format.clang-format \
+    src/img/res.png
 
 SUBDIRS += \
     QtNTPSC.pro
+
+RESOURCES += \
+    src/img/iconimg.qrc
 
