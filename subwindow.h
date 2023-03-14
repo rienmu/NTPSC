@@ -25,7 +25,7 @@ class SubWindow : public QMdiSubWindow
 
 public:
     SubWindow();
-    void AddDevice(UserDef* image);
+    void AddDevice(GuiItem *item);
 
 private:
     QGraphicsView backView;

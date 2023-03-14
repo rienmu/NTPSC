@@ -5,6 +5,7 @@
 #include <QMessageBox>
 #include <QThread>
 #include "controls/drawthread.h"
+#include "controls/guiitem.h"
 namespace Ui {
 class MainWindow;
 }
@@ -16,7 +17,8 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     void AddSubWindows();
-    void AddDevice(UserDef* image);
+   // void AddDevice(UserDef* image);
+    void AddDevice(GuiItem* item);
     ~MainWindow();
 
 private:
@@ -38,6 +40,10 @@ public:
 
     QString getElementPath() const;
     void setElementPath(const QString &value);
+public slots:
+    void getAddResSignal();
+signals:
+    void sendAddDeviceSignal(GuiItem *item);
 };
 
 #endif // MAINWINDOW_H

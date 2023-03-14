@@ -3,18 +3,28 @@
 GuiItem::GuiItem()
 {
 
-    this->setFlags(QGraphicsItem::ItemIsMovable);
+    this->setFlags(QGraphicsItem::ItemIsMovable | QGraphicsItem::ItemIsSelectable);
     this->setCacheMode(QGraphicsItem::ItemCoordinateCache);
 }
 
 QRectF GuiItem::boundingRect() const
 {
-    QRectF rect(10,10,20,20);
+    QRectF rect(0,0,100,100);
     return rect;
 }
 
 void GuiItem::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget)
 {
+
+    if(isSelected())
+    {
+        painter->setPen(QPen(Qt::red));
+    }else
+    {
+       painter->setPen(QPen(Qt::black));
+    }
+
+
     if(!this->LineList.isEmpty()){
         for(int i =0; i<this->LineList.count();i++){
             painter->drawLine(this->LineList.at(i));
@@ -66,6 +76,7 @@ void GuiItem::setPath(const QString &value)
 
 void GuiItem::mousePressEvent(QGraphicsSceneMouseEvent *event)
 {
+    update();
     QPointF scenePos = event->scenePos();
     QPointF pos = event->pos();
 

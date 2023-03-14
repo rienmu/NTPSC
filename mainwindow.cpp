@@ -32,17 +32,27 @@ void MainWindow::getMessageBox(QString msg)
 void MainWindow::connections()
 {
     connect(ui->actionNew,&QAction::triggered,this,&MainWindow::AddSubWindows);
+    //电阻按钮连接
+    /*第一个参数是发送者
+     * 第二个参数是发送者发送的信号函数
+     * 第三个参数是接收者
+     * 第四个参数是接受者的嘈函数
+     *                     */
+    connect(ui->actionRes,&QAction::triggered,this,&MainWindow::getAddResSignal);
+    connect(this,&MainWindow::sendAddDeviceSignal,this,&MainWindow::AddDevice);
     //connect(ui->actionRes,&QAction::triggered,drawT,&DrawThread::drawres);
-    connect(ui->actionRes,&QAction::triggered,drawT,&DrawThread::drawres);
+    //connect(ui->actionRes,&QAction::triggered,drawT,&DrawThread::drawres);
 
 
     //绘画线程连接
-    connect(drawT,DrawThread::sendiamge,this,&MainWindow::AddDevice);
-    connect(this,&MainWindow::destroyed,this,&MainWindow::delAllThread);
-    connect(drawT,DrawThread::sendMessageBOX,this,&MainWindow::getMessageBox);
+   // connect(drawT,DrawThread::sendiamge,this,&MainWindow::AddDevice);
+   // connect(this,&MainWindow::destroyed,this,&MainWindow::delAllThread);
+   // connect(drawT,DrawThread::sendMessageBOX,this,&MainWindow::getMessageBox);
 
 
     //提示框
+
+
 
 }
 
@@ -79,6 +89,14 @@ void MainWindow::setElementPath(const QString &value)
 {
     ElementPath = value;
 }
+
+void MainWindow::getAddResSignal()
+{
+    GuiItem *ress = new GuiItem();
+    ress->setPath("../NTPSC//lib//res.ntp");
+    ress->ReadAndWriteFile(ress->getPath());
+    emit sendAddDeviceSignal(ress);
+}
 void MainWindow::AddSubWindows(){
     // SubWindows *w = new SubWindows();
     SubWindow *w = new SubWindow();
@@ -91,14 +109,14 @@ void MainWindow::AddSubWindows(){
     w->show();
 }
 
-void MainWindow::AddDevice(UserDef* image)
-{
-    //int nType = device.getnType();
-    int i = MainWindow::ui->mian_mdiArea->subWindowList().count();
-    qDebug()<<i;
-    const QMdiSubWindow *sub = ui->mian_mdiArea->activeSubWindow();
-    SubWindow *s = (SubWindow*) sub;
-    s->AddDevice(image);
+//void MainWindow::AddDevice(UserDef* image)
+//{
+//    //int nType = device.getnType();
+//    int i = MainWindow::ui->mian_mdiArea->subWindowList().count();
+//    qDebug()<<i;
+//    const QMdiSubWindow *sub = ui->mian_mdiArea->activeSubWindow();
+//    SubWindow *s = (SubWindow*) sub;
+//    s->AddDevice(image);
 
 
 //    switch (nType) {
@@ -108,6 +126,16 @@ void MainWindow::AddDevice(UserDef* image)
 //        break;
 //    default:
 //        break;
-//    }
+//    //    }
+//}
+
+void MainWindow::AddDevice(GuiItem *item)
+{
+    //int nType = device.getnType();
+    int i = MainWindow::ui->mian_mdiArea->subWindowList().count();
+    qDebug()<<i;
+    const QMdiSubWindow *sub = ui->mian_mdiArea->activeSubWindow();
+    SubWindow *s = (SubWindow*) sub;
+    s->AddDevice(item);
 }
 

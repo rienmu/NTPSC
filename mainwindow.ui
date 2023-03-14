@@ -187,7 +187,8 @@
   </action>
   <action name="actionRes">
    <property name="icon">
-    <iconset theme="R"/>
+    <iconset resource="src/img/iconimg.qrc">
+     <normaloff>:/img/icon/res.png</normaloff>:/img/icon/res.png</iconset>
    </property>
    <property name="text">
     <string>电阻</string>
@@ -195,9 +196,14 @@
    <property name="toolTip">
     <string>电阻</string>
    </property>
+   <property name="iconVisibleInMenu">
+    <bool>true</bool>
+   </property>
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="src/img/iconimg.qrc"/>
+ </resources>
  <connections/>
 </ui>
