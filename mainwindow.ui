@@ -87,9 +87,10 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
-   <addaction name="separator"/>
    <addaction name="actionNew"/>
+   <addaction name="separator"/>
    <addaction name="actionRes"/>
+   <addaction name="actionDiod"/>
   </widget>
   <action name="actionnew">
    <property name="text">
@@ -198,6 +199,18 @@
    </property>
    <property name="iconVisibleInMenu">
     <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionDiod">
+   <property name="icon">
+    <iconset resource="src/img/iconimg.qrc">
+     <normaloff>:/img/icon/diod.png</normaloff>:/img/icon/diod.png</iconset>
+   </property>
+   <property name="text">
+    <string>二极管</string>
+   </property>
+   <property name="toolTip">
+    <string>二极管</string>
    </property>
   </action>
  </widget>

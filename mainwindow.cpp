@@ -33,17 +33,18 @@ void MainWindow::connections()
 {
     connect(ui->actionNew,&QAction::triggered,this,&MainWindow::AddSubWindows);
     //电阻按钮连接
-    /*第一个参数是发送者
+     /*第一个参数是发送者
      * 第二个参数是发送者发送的信号函数
      * 第三个参数是接收者
      * 第四个参数是接受者的嘈函数
-     *                     */
+     */
     connect(ui->actionRes,&QAction::triggered,this,&MainWindow::getAddResSignal);
     connect(this,&MainWindow::sendAddDeviceSignal,this,&MainWindow::AddDevice);
     //connect(ui->actionRes,&QAction::triggered,drawT,&DrawThread::drawres);
     //connect(ui->actionRes,&QAction::triggered,drawT,&DrawThread::drawres);
-
-
+    //二极管
+    connect(ui->actionDiod,&QAction::triggered,this,&MainWindow::getADdDiodSignal);
+    connect(this,&MainWindow::sendAddDeviceSignal,this,&MainWindow::AddDevice);
     //绘画线程连接
    // connect(drawT,DrawThread::sendiamge,this,&MainWindow::AddDevice);
    // connect(this,&MainWindow::destroyed,this,&MainWindow::delAllThread);
@@ -92,10 +93,18 @@ void MainWindow::setElementPath(const QString &value)
 
 void MainWindow::getAddResSignal()
 {
-    GuiItem *ress = new GuiItem();
-    ress->setPath("../NTPSC//lib//res.ntp");
-    ress->ReadAndWriteFile(ress->getPath());
-    emit sendAddDeviceSignal(ress);
+    GuiItem *item = new GuiItem();
+    item->setPath("../NTPSC//lib//res.ntp");
+    item->ReadAndWriteFile(item->getPath());
+    emit sendAddDeviceSignal(item);
+}
+
+void MainWindow::getADdDiodSignal()
+{
+    GuiItem *item = new GuiItem();
+    item->setPath("../NTPSC//lib//diod.ntp");
+    item->ReadAndWriteFile(item->getPath());
+    emit sendAddDeviceSignal(item);
 }
 void MainWindow::AddSubWindows(){
     // SubWindows *w = new SubWindows();
