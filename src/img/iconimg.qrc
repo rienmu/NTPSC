@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/img/icon">
         <file>res.png</file>
+        <file>diod.png</file>
     </qresource>
 </RCC>
