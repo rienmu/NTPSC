@@ -31,6 +31,7 @@ SubWindow::SubWindow()
 
 void SubWindow::AddDevice(GuiItem *item)
 {
+
     backScene.addItem(item);
 }
 //void SubWindow::AddDevice(UserDef* image){
@@ -85,6 +86,10 @@ void SubWindow::resizeEvent(QResizeEvent *event)
     backView.move(6,30);
     int w = this->size().width();
     int h = this->size().height();
-    backView.resize(w-12,h-46);
+    backView.resize(w-25,h-50);
+    backScene.setSceneRect(0, 0, w-25,h-50);
+    backView.setScene(&backScene);
+    backScene.setParent(&backView);
+    backView.show();
 }
 

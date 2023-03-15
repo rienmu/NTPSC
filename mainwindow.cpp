@@ -33,11 +33,11 @@ void MainWindow::connections()
 {
     connect(ui->actionNew,&QAction::triggered,this,&MainWindow::AddSubWindows);
     //电阻按钮连接
-    /*第一个参数是发送者
+     /*第一个参数是发送者
      * 第二个参数是发送者发送的信号函数
      * 第三个参数是接收者
      * 第四个参数是接受者的嘈函数
-     *                     */
+     */
     connect(ui->actionRes,&QAction::triggered,this,&MainWindow::getAddResSignal);
     connect(this,&MainWindow::sendAddDeviceSignal,this,&MainWindow::AddDevice);
     //connect(ui->actionRes,&QAction::triggered,drawT,&DrawThread::drawres);
