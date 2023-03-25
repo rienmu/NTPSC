@@ -38,8 +38,7 @@ SOURCES += \
     guibackground.cpp \
     controls/drawthread.cpp \
     controls/guiitem.cpp \
-    controls/guibase.cpp \
-    controls/arc.cpp
+    controls/guibase.cpp
 
 
 HEADERS += \
@@ -62,8 +61,7 @@ HEADERS += \
     guibackground.h \
     controls/drawthread.h \
     controls/guiitem.h \
-    controls/guibase.h \
-    controls/arc.h
+    controls/guibase.h
 
 
 FORMS += \

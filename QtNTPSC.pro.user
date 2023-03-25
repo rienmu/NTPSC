@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
+<<<<<<< HEAD
 <!-- Written by QtCreator 4.5.2, 2023-03-24T19:43:26. -->
+=======
+<!-- Written by QtCreator 4.5.2, 2023-03-15T16:57:47. -->
+>>>>>>> fc61124e94cad2b63e5d574d567c408eddcb3e32
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -292,7 +296,11 @@
     <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.ProFile">QtNTPSC.pro</value>
     <value type="bool" key="Qt4ProjectManager.Qt4RunConfiguration.UseDyldImageSuffix">false</value>
     <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.UserWorkingDirectory"></value>
+<<<<<<< HEAD
     <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.UserWorkingDirectory.default">D:/qt/build-QtNTPSC-Desktop_Qt_5_9_5_MinGW_32bit-Debug</value>
+=======
+    <value type="QString" key="Qt4ProjectManager.Qt4RunConfiguration.UserWorkingDirectory.default"></value>
+>>>>>>> fc61124e94cad2b63e5d574d567c408eddcb3e32
     <value type="uint" key="RunConfiguration.QmlDebugServerPort">3768</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
     <value type="bool" key="RunConfiguration.UseCppDebuggerAuto">true</value>

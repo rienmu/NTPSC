@@ -1,10 +1,14 @@
 <RCC>
     <qresource prefix="/img/icon">
         <file>res.png</file>
+<<<<<<< HEAD
         <file>amm.png</file>
         <file>power.png</file>
         <file>cap.png</file>
         <file>inductance.png</file>
         <file>landing.png</file>
+=======
+        <file>diod.png</file>
+>>>>>>> fc61124e94cad2b63e5d574d567c408eddcb3e32
     </qresource>
 </RCC>
