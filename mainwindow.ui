@@ -242,10 +242,6 @@
    <property name="icon">
     <iconset resource="src/img/iconimg.qrc">
      <normaloff>:/img/icon/Diod.png</normaloff>:/img/icon/Diod.png</iconset>
-  <action name="actionDiod">
-   <property name="icon">
-    <iconset resource="src/img/iconimg.qrc">
-     <normaloff>:/img/icon/diod.png</normaloff>:/img/icon/diod.png</iconset>
    </property>
    <property name="text">
     <string>二极管</string>
