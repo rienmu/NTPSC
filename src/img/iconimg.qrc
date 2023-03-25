@@ -2,6 +2,13 @@
     <qresource prefix="/img/icon">
         <file>res.png</file>
 
+        <file>amm.png</file>
+        <file>power.png</file>
+        <file>cap.png</file>
+        <file>inductance.png</file>
+        <file>landing.png</file>
+
+
         <file>vol.png</file>
         <file>li.png</file>
       
@@ -10,5 +17,6 @@
         <file>amp.png</file>
 
         <file>diod.png</file>
+
     </qresource>
 </RCC>

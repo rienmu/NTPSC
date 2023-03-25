@@ -43,12 +43,21 @@ public:
 public slots:
     void getAddResSignal();
 
+    void getAddAmmSignal();
+    void getAddPowerSignal();
+    void getAddCapSignal();
+    void getAddInductanceSignal();
+    void getAddLandingSignal();
+
+
     void getAddVolSignal();
     void getAddliSignal();
     void getAddDiodSignal();
     void getAddGroSignal();
      void getAddAmpSignal();
+
     void getADdDiodSignal();
+
 signals:
     void sendAddDeviceSignal(GuiItem *item);
 };

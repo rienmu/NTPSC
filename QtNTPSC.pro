@@ -80,8 +80,6 @@ DISTFILES += \
     lib/power.ntp \
     lib/cap.ntp \
     lib/power.ntp \
-    lib/res.ntp \
-    lib/res.txt \
     lib/vol.ntp \
     lib/diod.ntp \
     lib/pnp.ntp \
@@ -90,9 +88,13 @@ DISTFILES += \
     src/img/res.png \
     format.clang-format \
     src/img/res.png \
+    lib/amm.ntp \
+    lib/inductance.ntp \
+    lib/landing.ntp
     lib/li.ntp \
     lib/amp.ntp \
     lib/arc.ntp
+
 
 SUBDIRS += \
     QtNTPSC.pro

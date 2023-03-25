@@ -37,7 +37,8 @@
      <x>0</x>
      <y>0</y>
      <width>1152</width>
-     <height>25</height>
+
+     <height>17</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
@@ -91,13 +92,17 @@
    <addaction name="separator"/>
    <addaction name="actionRes"/>
 
+   <addaction name="actionAmm"/>
+   <addaction name="actionPower"/>
+   <addaction name="actionCap"/>
+   <addaction name="actionLanding"/>
+   <addaction name="actionInductance"/>
+   <addaction name="actionDiod"/>
    <addaction name="actionVol"/>
    <addaction name="actionli"/>
-   <addaction name="actionDiod"/>
    <addaction name="actionGro"/>
    <addaction name="actionAmp"/>
 
-   <addaction name="actionDiod"/>
 
   </widget>
   <action name="actionnew">
@@ -214,7 +219,70 @@
    </property>
   </action>
 
+  <action name="actionAmm">
+   <property name="icon">
+    <iconset resource="src/img/iconimg.qrc">
+     <normaloff>:/img/icon/amm.png</normaloff>:/img/icon/amm.png</iconset>
+   </property>
+   <property name="text">
+    <string>电流表</string>
+   </property>
+   <property name="toolTip">
+    <string>电流表</string>
+   </property>
+  </action>
+  <action name="actionPower">
+   <property name="icon">
+    <iconset resource="src/img/iconimg.qrc">
+     <normaloff>:/img/icon/power.png</normaloff>:/img/icon/power.png</iconset>
+   </property>
+   <property name="text">
+    <string>电源</string>
+   </property>
+   <property name="toolTip">
+    <string>电源</string>
+   </property>
+  </action>
+  <action name="actionCap">
+   <property name="icon">
+    <iconset resource="src/img/iconimg.qrc">
+     <normaloff>:/img/icon/cap.png</normaloff>:/img/icon/cap.png</iconset>
+   </property>
+   <property name="text">
+    <string>电容</string>
+   </property>
+   <property name="toolTip">
+    <string>电容</string>
+   </property>
+  </action>
+  <action name="actionLanding">
+   <property name="icon">
+    <iconset resource="src/img/iconimg.qrc">
+     <normaloff>:/img/icon/landing.png</normaloff>:/img/icon/landing.png</iconset>
+   </property>
+   <property name="text">
+    <string>接地</string>
+   </property>
+   <property name="toolTip">
+    <string>接地</string>
+   </property>
+  </action>
+  <action name="actionInductance">
+   <property name="icon">
+    <iconset resource="src/img/iconimg.qrc">
+     <normaloff>:/img/icon/inductance.png</normaloff>:/img/icon/inductance.png</iconset>
+   </property>
+   <property name="text">
+    <string>电感</string>
+   </property>
+   <property name="toolTip">
+    <string>电感</string>
+
+  //<action name="actionDiod">
+
+
   <action name="actionVol">
+
    <property name="icon">
     <iconset resource="src/img/iconimg.qrc">
      <normaloff>:/img/icon/vol.png</normaloff>:/img/icon/vol.png</iconset>
@@ -245,6 +313,7 @@
    </property>
    <property name="text">
     <string>二极管</string>
+
    </property>
   </action>
   <action name="actionGro">

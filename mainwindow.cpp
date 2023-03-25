@@ -42,6 +42,22 @@ void MainWindow::connections()
     connect(this,&MainWindow::sendAddDeviceSignal,this,&MainWindow::AddDevice);
     //connect(ui->actionRes,&QAction::triggered,drawT,&DrawThread::drawres);
     //connect(ui->actionRes,&QAction::triggered,drawT,&DrawThread::drawres);
+    connect(ui->actionAmm,&QAction::triggered,this,&MainWindow::getAddAmmSignal);
+    connect(this,&MainWindow::sendAddDeviceSignal,this,&MainWindow::AddDevice);
+
+    connect(ui->actionPower,&QAction::triggered,this,&MainWindow::getAddPowerSignal);
+    connect(this,&MainWindow::sendAddDeviceSignal,this,&MainWindow::AddDevice);
+
+    connect(ui->actionCap,&QAction::triggered,this,&MainWindow::getAddCapSignal);
+    connect(this,&MainWindow::sendAddDeviceSignal,this,&MainWindow::AddDevice);
+
+
+    connect(ui->actionLanding,&QAction::triggered,this,&MainWindow::getAddLandingSignal);
+    connect(this,&MainWindow::sendAddDeviceSignal,this,&MainWindow::AddDevice);
+
+    connect(ui->actionInductance,&QAction::triggered,this,&MainWindow::getAddInductanceSignal);
+    connect(this,&MainWindow::sendAddDeviceSignal,this,&MainWindow::AddDevice);
+
     connect(ui->actionVol,&QAction::triggered,this,&MainWindow::getAddVolSignal);
     connect(this,&MainWindow::sendAddDeviceSignal,this,&MainWindow::AddDevice);
 
@@ -60,6 +76,7 @@ void MainWindow::connections()
     //二极管
     connect(ui->actionDiod,&QAction::triggered,this,&MainWindow::getADdDiodSignal);
     connect(this,&MainWindow::sendAddDeviceSignal,this,&MainWindow::AddDevice);
+
     //绘画线程连接
    // connect(drawT,DrawThread::sendiamge,this,&MainWindow::AddDevice);
    // connect(this,&MainWindow::destroyed,this,&MainWindow::delAllThread);
@@ -122,6 +139,49 @@ void MainWindow::getADdDiodSignal()
     emit sendAddDeviceSignal(item);
 }
 
+
+void MainWindow::getAddAmmSignal()
+{
+    GuiItem *amm = new GuiItem();
+    amm->setPath("../NTPSC//lib//amm.ntp");
+    amm->ReadAndWriteFile(amm->getPath());
+    emit sendAddDeviceSignal(amm);
+    QPainter painter(this);
+    painter.drawText(20,5,"A");//
+}
+
+void MainWindow::getAddPowerSignal()
+{
+    GuiItem *amm = new GuiItem();
+    amm->setPath("../NTPSC//lib//power.ntp");
+    amm->ReadAndWriteFile(amm->getPath());
+    emit sendAddDeviceSignal(amm);
+}
+
+void MainWindow::getAddInductanceSignal()
+{
+    GuiItem *amm = new GuiItem();
+    amm->setPath("../NTPSC//lib//inductance.ntp");
+    amm->ReadAndWriteFile(amm->getPath());
+    emit sendAddDeviceSignal(amm);
+}
+
+void MainWindow::getAddCapSignal()
+{
+    GuiItem *amm = new GuiItem();
+    amm->setPath("../NTPSC//lib//cap.ntp");
+    amm->ReadAndWriteFile(amm->getPath());
+    emit sendAddDeviceSignal(amm);
+}
+
+void MainWindow::getAddLandingSignal()
+{
+    GuiItem *amm = new GuiItem();
+    amm->setPath("../NTPSC//lib//landing.ntp");
+    amm->ReadAndWriteFile(amm->getPath());
+    emit sendAddDeviceSignal(amm);
+}
+
 void MainWindow::getAddVolSignal()
 {
     GuiItem *vol = new GuiItem();
@@ -161,6 +221,7 @@ void MainWindow::getAddAmpSignal()
     amp->ReadAndWriteFile(amp->getPath());
     emit sendAddDeviceSignal(amp);
 }
+
 
 
 void MainWindow::AddSubWindows(){

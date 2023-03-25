@@ -58,11 +58,11 @@ void GuiItem::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, Q
     if(!this->TextList.isEmpty()){
         for(int i = 0;i<this->TextList.count();i++)
         {
-
             NText text = TextList.at(i);
             painter->drawText(text.getX(),text.getY(),text.getText());
         }
     }
+    
     if(!this->ArcList.isEmpty())
     {
         for(int i=0;i < this->ArcList.count();i++)
@@ -192,6 +192,13 @@ void GuiItem::AnalysisText(QStringList CellList){
                 line.SetType(type);
                 // qDebug()<<line.GetType();
                 LineList.append(line);
+            }
+            if(str=="ARC"){
+                int x,y,w,h,start,span;
+                qts>>x>>y>>w>>h>>start>>span;
+                Arc arc(x,y,w,h,start,span);
+                ArcList.append(arc);
+
             }
             if(str=="RECT"){
                 NRect rect;
