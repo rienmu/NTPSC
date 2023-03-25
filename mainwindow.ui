@@ -87,14 +87,18 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
-   <addaction name="separator"/>
    <addaction name="actionNew"/>
+   <addaction name="separator"/>
    <addaction name="actionRes"/>
+
    <addaction name="actionVol"/>
    <addaction name="actionli"/>
    <addaction name="actionDiod"/>
    <addaction name="actionGro"/>
    <addaction name="actionAmp"/>
+
+   <addaction name="actionDiod"/>
+
   </widget>
   <action name="actionnew">
    <property name="text">
@@ -209,6 +213,7 @@
     <bool>true</bool>
    </property>
   </action>
+
   <action name="actionVol">
    <property name="icon">
     <iconset resource="src/img/iconimg.qrc">
@@ -237,6 +242,10 @@
    <property name="icon">
     <iconset resource="src/img/iconimg.qrc">
      <normaloff>:/img/icon/Diod.png</normaloff>:/img/icon/Diod.png</iconset>
+  <action name="actionDiod">
+   <property name="icon">
+    <iconset resource="src/img/iconimg.qrc">
+     <normaloff>:/img/icon/diod.png</normaloff>:/img/icon/diod.png</iconset>
    </property>
    <property name="text">
     <string>二极管</string>
