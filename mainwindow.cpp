@@ -42,7 +42,21 @@ void MainWindow::connections()
     connect(this,&MainWindow::sendAddDeviceSignal,this,&MainWindow::AddDevice);
     //connect(ui->actionRes,&QAction::triggered,drawT,&DrawThread::drawres);
     //connect(ui->actionRes,&QAction::triggered,drawT,&DrawThread::drawres);
+    connect(ui->actionVol,&QAction::triggered,this,&MainWindow::getAddVolSignal);
+    connect(this,&MainWindow::sendAddDeviceSignal,this,&MainWindow::AddDevice);
 
+    connect(ui->actionli,&QAction::triggered,this,&MainWindow::getAddliSignal);
+    connect(this,&MainWindow::sendAddDeviceSignal,this,&MainWindow::AddDevice);
+
+
+    connect(ui->actionDiod,&QAction::triggered,this,&MainWindow::getAddDiodSignal);
+    connect(this,&MainWindow::sendAddDeviceSignal,this,&MainWindow::AddDevice);
+
+    connect(ui->actionGro,&QAction::triggered,this,&MainWindow::getAddGroSignal);
+    connect(this,&MainWindow::sendAddDeviceSignal,this,&MainWindow::AddDevice);
+
+    connect(ui->actionAmp,&QAction::triggered,this,&MainWindow::getAddAmpSignal);
+    connect(this,&MainWindow::sendAddDeviceSignal,this,&MainWindow::AddDevice);
 
     //绘画线程连接
    // connect(drawT,DrawThread::sendiamge,this,&MainWindow::AddDevice);
@@ -97,6 +111,48 @@ void MainWindow::getAddResSignal()
     ress->ReadAndWriteFile(ress->getPath());
     emit sendAddDeviceSignal(ress);
 }
+
+void MainWindow::getAddVolSignal()
+{
+    GuiItem *vol = new GuiItem();
+    vol->setPath("../NTPSC//lib//vol.ntp");
+    vol->ReadAndWriteFile(vol->getPath());
+    emit sendAddDeviceSignal(vol);
+}
+
+void MainWindow::getAddliSignal()
+{
+    GuiItem *lii = new GuiItem();
+    lii->setPath("../NTPSC//lib//li.ntp");
+    lii->ReadAndWriteFile(lii->getPath());
+    emit sendAddDeviceSignal(lii);
+}
+
+void MainWindow::getAddDiodSignal()
+{
+    GuiItem *diod = new GuiItem();
+    diod->setPath("../NTPSC//lib//diod.ntp");
+    diod->ReadAndWriteFile(diod->getPath());
+    emit sendAddDeviceSignal(diod);
+}
+
+void MainWindow::getAddGroSignal()
+{
+    GuiItem *gro = new GuiItem();
+    gro->setPath("../NTPSC//lib//gro.ntp");
+    gro->ReadAndWriteFile(gro->getPath());
+    emit sendAddDeviceSignal(gro);
+}
+
+void MainWindow::getAddAmpSignal()
+{
+    GuiItem *amp = new GuiItem();
+    amp->setPath("../NTPSC//lib//amp.ntp");
+    amp->ReadAndWriteFile(amp->getPath());
+    emit sendAddDeviceSignal(amp);
+}
+
+
 void MainWindow::AddSubWindows(){
     // SubWindows *w = new SubWindows();
     SubWindow *w = new SubWindow();

@@ -12,6 +12,10 @@
 //    this->x = x;
 //    this->y = y;
 //}
+
+
+
+
 void Line::SetType(QString type){
     this->type = type;
 }

@@ -4,6 +4,7 @@
 #include "QPainter"
 #include "QTextStream"
 #include "../stable.h"
+#include "arc.h"
 #include "line.h"
 #include "rect.h"
 #include "rcircle.h"
@@ -50,6 +51,7 @@ private:
     QList<RCircle> CircleList;
     QList<NText> TextList;
     QList<Pin> PinList;
+    QList<Arc> ArcList;
 
     QString ElementType;
     QString CellStr;

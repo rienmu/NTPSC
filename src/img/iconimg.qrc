@@ -1,5 +1,11 @@
 <RCC>
     <qresource prefix="/img/icon">
         <file>res.png</file>
+        <file>vol.png</file>
+        <file>li.png</file>
+        <file>C:/Users/Administrator/Downloads/pixil-frame-0 (25).png</file>
+        <file>Diod.png</file>
+        <file>gro.png</file>
+        <file>amp.png</file>
     </qresource>
 </RCC>
