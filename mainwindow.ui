@@ -37,7 +37,7 @@
      <x>0</x>
      <y>0</y>
      <width>1152</width>
-     <height>23</height>
+     <height>17</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">
@@ -90,6 +90,11 @@
    <addaction name="separator"/>
    <addaction name="actionNew"/>
    <addaction name="actionRes"/>
+   <addaction name="actionAmm"/>
+   <addaction name="actionPower"/>
+   <addaction name="actionCap"/>
+   <addaction name="actionLanding"/>
+   <addaction name="actionInductance"/>
   </widget>
   <action name="actionnew">
    <property name="text">
@@ -198,6 +203,66 @@
    </property>
    <property name="iconVisibleInMenu">
     <bool>true</bool>
+   </property>
+  </action>
+  <action name="actionAmm">
+   <property name="icon">
+    <iconset resource="src/img/iconimg.qrc">
+     <normaloff>:/img/icon/amm.png</normaloff>:/img/icon/amm.png</iconset>
+   </property>
+   <property name="text">
+    <string>电流表</string>
+   </property>
+   <property name="toolTip">
+    <string>电流表</string>
+   </property>
+  </action>
+  <action name="actionPower">
+   <property name="icon">
+    <iconset resource="src/img/iconimg.qrc">
+     <normaloff>:/img/icon/power.png</normaloff>:/img/icon/power.png</iconset>
+   </property>
+   <property name="text">
+    <string>电源</string>
+   </property>
+   <property name="toolTip">
+    <string>电源</string>
+   </property>
+  </action>
+  <action name="actionCap">
+   <property name="icon">
+    <iconset resource="src/img/iconimg.qrc">
+     <normaloff>:/img/icon/cap.png</normaloff>:/img/icon/cap.png</iconset>
+   </property>
+   <property name="text">
+    <string>电容</string>
+   </property>
+   <property name="toolTip">
+    <string>电容</string>
+   </property>
+  </action>
+  <action name="actionLanding">
+   <property name="icon">
+    <iconset resource="src/img/iconimg.qrc">
+     <normaloff>:/img/icon/landing.png</normaloff>:/img/icon/landing.png</iconset>
+   </property>
+   <property name="text">
+    <string>接地</string>
+   </property>
+   <property name="toolTip">
+    <string>接地</string>
+   </property>
+  </action>
+  <action name="actionInductance">
+   <property name="icon">
+    <iconset resource="src/img/iconimg.qrc">
+     <normaloff>:/img/icon/inductance.png</normaloff>:/img/icon/inductance.png</iconset>
+   </property>
+   <property name="text">
+    <string>电感</string>
+   </property>
+   <property name="toolTip">
+    <string>电感</string>
    </property>
   </action>
  </widget>

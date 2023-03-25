@@ -6,6 +6,7 @@
 #include "../stable.h"
 #include "line.h"
 #include "rect.h"
+#include "arc.h"
 #include "rcircle.h"
 #include "circle.h"
 #include "text.h"
@@ -50,6 +51,7 @@ private:
     QList<RCircle> CircleList;
     QList<NText> TextList;
     QList<Pin> PinList;
+    QList<Arc>ArcList;
 
     QString ElementType;
     QString CellStr;

@@ -42,6 +42,11 @@ public:
     void setElementPath(const QString &value);
 public slots:
     void getAddResSignal();
+    void getAddAmmSignal();
+    void getAddPowerSignal();
+    void getAddCapSignal();
+    void getAddInductanceSignal();
+    void getAddLandingSignal();
 signals:
     void sendAddDeviceSignal(GuiItem *item);
 };

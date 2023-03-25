@@ -59,7 +59,15 @@ void GuiItem::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, Q
         for(int i = 0;i<this->TextList.count();i++)
         {
 
-            //Text text = TextList.
+           // NText text = TextList.at(i);
+            //painter->drawText(text.getX(),text.getY(),text.getText());
+        }
+    }
+    if(!this->ArcList.isEmpty()){
+        for(int i=0;i<this->ArcList.count();i++)
+        {
+            Arc arc=ArcList.at(i);
+            painter->drawArc(arc.getX(),arc.getY(),arc.getW(),arc.getH(),arc.getStartAngle(),arc.getSpanAngle());
         }
     }
 }
@@ -183,6 +191,13 @@ void GuiItem::AnalysisText(QStringList CellList){
                 line.SetType(type);
                 // qDebug()<<line.GetType();
                 LineList.append(line);
+            }
+            if(str=="ARC"){
+                int x,y,w,h,start,span;
+                qts>>x>>y>>w>>h>>start>>span;
+                Arc arc(x,y,w,h,start,span);
+                ArcList.append(arc);
+
             }
             if(str=="RECT"){
                 NRect rect;
