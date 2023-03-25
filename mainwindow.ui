@@ -37,6 +37,7 @@
      <x>0</x>
      <y>0</y>
      <width>1152</width>
+
      <height>17</height>
     </rect>
    </property>
@@ -90,15 +91,19 @@
    <addaction name="actionNew"/>
    <addaction name="separator"/>
    <addaction name="actionRes"/>
-<<<<<<< HEAD
+
    <addaction name="actionAmm"/>
    <addaction name="actionPower"/>
    <addaction name="actionCap"/>
    <addaction name="actionLanding"/>
    <addaction name="actionInductance"/>
-=======
    <addaction name="actionDiod"/>
->>>>>>> fc61124e94cad2b63e5d574d567c408eddcb3e32
+   <addaction name="actionVol"/>
+   <addaction name="actionli"/>
+   <addaction name="actionGro"/>
+   <addaction name="actionAmp"/>
+
+
   </widget>
   <action name="actionnew">
    <property name="text">
@@ -133,6 +138,10 @@
    </property>
   </action>
   <action name="actiongres">
+   <property name="icon">
+    <iconset resource="src/img/iconimg.qrc">
+     <normaloff>:/img/icon/res.png</normaloff>:/img/icon/res.png</iconset>
+   </property>
    <property name="text">
     <string>电阻</string>
    </property>
@@ -209,7 +218,7 @@
     <bool>true</bool>
    </property>
   </action>
-<<<<<<< HEAD
+
   <action name="actionAmm">
    <property name="icon">
     <iconset resource="src/img/iconimg.qrc">
@@ -268,18 +277,61 @@
    </property>
    <property name="toolTip">
     <string>电感</string>
-=======
+
+  //<action name="actionDiod">
+
+
+  <action name="actionVol">
+
+   <property name="icon">
+    <iconset resource="src/img/iconimg.qrc">
+     <normaloff>:/img/icon/vol.png</normaloff>:/img/icon/vol.png</iconset>
+   </property>
+   <property name="text">
+    <string>电压表</string>
+   </property>
+   <property name="toolTip">
+    <string>电压表</string>
+   </property>
+  </action>
+  <action name="actionli">
+   <property name="icon">
+    <iconset resource="src/img/iconimg.qrc">
+     <normaloff>:/img/icon/li.png</normaloff>:/img/icon/li.png</iconset>
+   </property>
+   <property name="text">
+    <string>线段</string>
+   </property>
+   <property name="toolTip">
+    <string>线段</string>
+   </property>
+  </action>
   <action name="actionDiod">
    <property name="icon">
     <iconset resource="src/img/iconimg.qrc">
-     <normaloff>:/img/icon/diod.png</normaloff>:/img/icon/diod.png</iconset>
+     <normaloff>:/img/icon/Diod.png</normaloff>:/img/icon/Diod.png</iconset>
    </property>
    <property name="text">
     <string>二极管</string>
+
    </property>
-   <property name="toolTip">
-    <string>二极管</string>
->>>>>>> fc61124e94cad2b63e5d574d567c408eddcb3e32
+  </action>
+  <action name="actionGro">
+   <property name="icon">
+    <iconset resource="src/img/iconimg.qrc">
+     <normaloff>:/img/icon/gro.png</normaloff>:/img/icon/gro.png</iconset>
+   </property>
+   <property name="text">
+    <string>三极管</string>
+   </property>
+  </action>
+  <action name="actionAmp">
+   <property name="icon">
+    <iconset resource="src/img/iconimg.qrc">
+     <normaloff>:/img/icon/amp.png</normaloff>:/img/icon/amp.png</iconset>
+   </property>
+   <property name="text">
+    <string>开关</string>
    </property>
   </action>
  </widget>

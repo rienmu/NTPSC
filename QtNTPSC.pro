@@ -38,7 +38,8 @@ SOURCES += \
     guibackground.cpp \
     controls/drawthread.cpp \
     controls/guiitem.cpp \
-    controls/guibase.cpp
+    controls/guibase.cpp \
+    controls/arc.cpp
 
 
 HEADERS += \
@@ -61,7 +62,8 @@ HEADERS += \
     guibackground.h \
     controls/drawthread.h \
     controls/guiitem.h \
-    controls/guibase.h
+    controls/guibase.h \
+    controls/arc.h
 
 
 FORMS += \
@@ -78,8 +80,6 @@ DISTFILES += \
     lib/power.ntp \
     lib/cap.ntp \
     lib/power.ntp \
-    lib/res.ntp \
-    lib/res.txt \
     lib/vol.ntp \
     lib/diod.ntp \
     lib/pnp.ntp \
@@ -91,6 +91,10 @@ DISTFILES += \
     lib/amm.ntp \
     lib/inductance.ntp \
     lib/landing.ntp
+    lib/li.ntp \
+    lib/amp.ntp \
+    lib/arc.ntp
+
 
 SUBDIRS += \
     QtNTPSC.pro
