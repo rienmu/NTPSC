@@ -38,7 +38,8 @@ SOURCES += \
     guibackground.cpp \
     controls/drawthread.cpp \
     controls/guiitem.cpp \
-    controls/guibase.cpp
+    controls/guibase.cpp \
+    controls/arc.cpp
 
 
 HEADERS += \
@@ -61,7 +62,8 @@ HEADERS += \
     guibackground.h \
     controls/drawthread.h \
     controls/guiitem.h \
-    controls/guibase.h
+    controls/guibase.h \
+    controls/arc.h
 
 
 FORMS += \
@@ -87,7 +89,10 @@ DISTFILES += \
     lib/amp.ntp \
     src/img/res.png \
     format.clang-format \
-    src/img/res.png
+    src/img/res.png \
+    lib/li.ntp \
+    lib/amp.ntp \
+    lib/arc.ntp
 
 SUBDIRS += \
     QtNTPSC.pro
