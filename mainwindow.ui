@@ -277,12 +277,10 @@
    </property>
    <property name="toolTip">
     <string>电感</string>
-
-  //<action name="actionDiod">
-
-
+    </property>
+    </action>
+<!--  <action name="actionDiod">-->
   <action name="actionVol">
-
    <property name="icon">
     <iconset resource="src/img/iconimg.qrc">
      <normaloff>:/img/icon/vol.png</normaloff>:/img/icon/vol.png</iconset>
