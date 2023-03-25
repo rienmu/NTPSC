@@ -56,8 +56,6 @@ HEADERS += \
     controls/circle.h \
     controls/pin.h \
     controls/rcircle.h \
-    controls/rect.h \
-    controls/userdef.h \
     subwindow.h \
     guibackground.h \
     controls/drawthread.h \
@@ -87,13 +85,11 @@ DISTFILES += \
     lib/amp.ntp \
     src/img/res.png \
     format.clang-format \
-    src/img/res.png \
     lib/amm.ntp \
     lib/inductance.ntp \
-    lib/landing.ntp
+    lib/landing.ntp \
     lib/li.ntp \
-    lib/amp.ntp \
-    lib/arc.ntp
+    lib/amp.ntp
 
 
 SUBDIRS += \
