@@ -89,7 +89,9 @@ DISTFILES += \
     lib/inductance.ntp \
     lib/landing.ntp \
     lib/li.ntp \
-    lib/amp.ntp
+    lib/amp.ntp \
+    src/img/gro.png \
+    src/img/amm.png
 
 
 SUBDIRS += \
