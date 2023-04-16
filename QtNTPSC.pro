@@ -89,8 +89,11 @@ DISTFILES += \
     lib/landing.ntp \
     lib/li.ntp \
     lib/amp.ntp \
+
     src/img/diod.png \
     lib/vol.ntp
+    src/img/gro.png \
+    src/img/amm.png
 
 
 SUBDIRS += \
