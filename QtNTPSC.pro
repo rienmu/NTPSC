@@ -78,7 +78,6 @@ DISTFILES += \
     lib/power.ntp \
     lib/cap.ntp \
     lib/power.ntp \
-    lib/vol.ntp \
     lib/diod.ntp \
     lib/pnp.ntp \
     lib/gro.ntp \
@@ -90,6 +89,9 @@ DISTFILES += \
     lib/landing.ntp \
     lib/li.ntp \
     lib/amp.ntp \
+
+    src/img/diod.png \
+    lib/vol.ntp
     src/img/gro.png \
     src/img/amm.png
 
